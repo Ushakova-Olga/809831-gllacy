@@ -24,11 +24,11 @@
 		<p>C 10 до 20 ежедневно<br>8 818 450-25-25<br></p>
 	</header>
   <main>
-	<div class="crumbs">
-		<a href="index.html">Главная</a>
-		<a href="catalog.html">Каталог</a>
-		<a href="#">Сливочное</a>
-	</div>
+	<ul class="crumbs">
+		<li><a href="index.html">Главная</a></li>
+		<li><a href="catalog.html">Каталог</a></li>
+		<li class="crumbs-current">Сливочное</li>
+	</ul>
 	<h1>Сливочное мороженое</h1>
 	
 	<div class="form">
@@ -49,75 +49,79 @@
 	</div>
 	<section class="catalog-items">
 		<h2 class="hidden">Каталог: мороженое на развес</h2>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>310 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-			<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-		</div>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>380 <!--Здесь будет вставлена иконка рубля--> /кг</span>
-			<p>Сливочно-кофейное с кусочками шоколада</p>
-		</div>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>355 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-			<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
-		</div>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>415 <!--Здесь будет вставлена иконка рубля--> /кг</span>
-			<p>Сливочное крем-брюле с карамельной подливкой</p>
-		</div>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>325 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-			<p>Сливочное с брусничным джемом</p>
-		</div>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>410 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-			<p>Сливочно-черничное с цельными ягодами черники</p>
-		</div>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>375 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-			<p>Сливочно-лимонное с карамельной присыпкой</p>
-		</div>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>320 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-			<p>Сливочное с шоколадной стружкой</p>
-		</div>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>440 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-			<p>Сливочно-ванильное с кусочками шоколада</p>
-		</div>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>435 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-			<p>Сливочное с ментоловым сиропом</p>
-		</div>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>355 /кг</span>
-			<p>Сливочное с кусочками черного шоколада</p>
-		</div>
-		<div class="catalog-item">
-			<img src="#" alt="картинка мороженого">
-			<span>420 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-			<p>Сливочное с мятным сиропом</p>
-		</div>
-	</section>
-	<div class="page-numbers">
-		<ul>
-			<li><a class="page-selected" href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
+		<ul class="catalog-list">
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>310 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+				<h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+			</li>
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>380 <!--Здесь будет вставлена иконка рубля--> /кг</span>
+				<h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+			</li>
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>355 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+				<h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+			</li>
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>415 <!--Здесь будет вставлена иконка рубля--> /кг</span>
+				<h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
+			</li>
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>325 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+				<h3><a href="#">Сливочное с брусничным джемом</a></h3>
+			</li>
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>410 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+				<h3><a href="#">Сливочно-черничное с цельными ягодами черники</a></h3>
+			</li>
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>375 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+				<h3><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
+			</li>
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>320 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+				<h3><a href="#">Сливочное с шоколадной стружкой</a></h3>
+			</li>
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>440 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+				<h3><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
+			</li>
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>435 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+				<h3><a href="#">Сливочное с ментоловым сиропом</a></h3>
+			</li>
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>355 /кг</span>
+				<h3><a href="#">Сливочное с кусочками черного шоколада</a></h3>
+			</li>
+			<li class="catalog-item">
+				<img src="#" alt="картинка мороженого">
+				<span>420 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+				<h3><a href="#">Сливочное с мятным сиропом</a></h3>
+			</li>
 		</ul>
-	</div>
+		<ul class="pagination-list">
+			<li class="pagination-unable"><a href="#"><!--Здесь будет иконка назад --></a></li>
+			<li class="pagination-current"><a href="#">1</a></li>
+			<li class="pagination-item"><a href="#">2</a></li>
+			<li class="pagination-item"><a href="#">3</a></li>
+			<li class="pagination-item"><a href="#">4</a></li>
+			<li class="pagination-item"><a href="#">5</a></li>
+			<li class="pagination-item"><a href="#"><!--Здесь будет иконка вперед --></a></li>
+		</ul>
+	</section>
+		
   </main>
   <footer class="glassy-footer">
 		<ul class="social-list">
@@ -133,8 +137,8 @@
 			<li><a href="#">Экологические стандарты</a><li>
 		</ul>
 		<div class="copyright">
-			<a><img src="htmlacademy-logo.png" alt="Логотип HTML-academy"></a>
-			<p>Сделано в HTML-academy 2017</p>
+			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="htmlacademy-logo.png" alt="Логотип HTML-academy"></a>
+			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML-academy</a> 2017</p>
 		</div>
 	</footer>
 	</body>
