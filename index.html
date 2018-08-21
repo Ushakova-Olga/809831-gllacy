@@ -9,23 +9,23 @@
 		<nav class="glassy-navigation">
 			<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Glassy Shop">
 			<ul class="site-navigation">
-				<li><a href="#">Каталог</a></li>  <!--Здесь будет ссылка на поп-ап -->
+				<li><a href="cat.html">Каталог</a></li>  <!--Здесь будет ссылка на поп-ап -->
 				<li><a href="delivery.html">Доставка и оплата</a></li>
 				<li><a href="about_us.html">О компании</a></li>
 			</ul>
 			<ul class="user-navigation">
-				<li><a href="#">Поиск</a></li> <!-- Здесь будет ссылка на поп-ап -->
-				<li><a href="#">Вход</a></li> <!-- Здесь будет ссылка на поп-ап -->
-				<li><a href="#">Корзина</a></li> <!-- Здесь будет ссылка на поп-ап -->
+				<li><a href="search.html">Поиск</a></li> 
+				<li><a class="login-link" href="login.html">Вход</a></li>
+				<li><a href="cart.html">Корзина</a></li> 
 			</ul>
 		</nav>
 		<p>C 10 до 20 ежедневно<br>8 818 450-25-25<br></p>
 	</header>
 	<main class="main-page">
-		<h1 class="hidden">Магазин мороженого Glassy Shop</h1>
+		<h1 class="visually-hidden">Магазин мороженого Glassy Shop</h1>
 		<section class="slider">
 		<!--   Здесь будет слайдер, который будет переключать слайды  -->
-			<h2 class="hidden">Акции на мороженое в рожках! Скидки!</h2>
+			<h2 class="visually-hidden">Акции на мороженое в рожках! Скидки!</h2>
 			<div class="slide">
 				<h3>Крем-брюле и пломбир с малиновым джемом</h3>
 				<!--Изображение планирую вставить как background-image при стилизации -->
@@ -49,7 +49,7 @@
 			</ul>
 		</section>
 		<section class="banners">
-			<h2 class="hidden">Акции на развесное мороженое! Подарки!</h2>
+			<h2 class="visually-hidden">Акции на развесное мороженое! Подарки!</h2>
 			<ul class="banners-list">
 				<li>
 					<h3>Малинка даром!</h3>
@@ -62,9 +62,8 @@
 			</ul>
 		</section>
 		<section class="hits">
-			<h2 class="hidden">Популярные товары!</h2>
-			
-			<!--Решила что логичнее здесь сделать списки с элементами чем div-->
+			<h2 class="visually-hidden">Популярные товары!</h2>
+
 			<ul class="hits-list">
 				<li class="catalog-item">
 					<img src="img/product-1.jpg" width="267" height="267" alt="картинка мороженого">
@@ -92,8 +91,7 @@
 		</section>
 		<section class="features">
 			<h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
-			<!--Хотела разметить как h1 так как фраза содержит главную информацию для поисковика, но смущает то что расположено в середине документа.-->
-			<!-- Заменила и здесь div на списки с элементами, это кажется логичнее-->
+
 			<ul class="features-list">
 				<li class="feature-item">
 					<!--Здесь будет иконка-->
@@ -119,12 +117,12 @@
 			<!--Фон будет вставлен как background-image-->
 		</article>
 		<section class="mailer">
-			<h2 class="hidden">Подписка на рассылку</h2>
+			<h2 class="visually-hidden">Подписка на рассылку</h2>
 			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
 			<!--Форма с одним полем input и кнопкой button-->
 		</section>
 		<section class="map">
-			<h2 class="hidden">Мы на карте</h2>
+			<h2 class="visually-hidden">Мы на карте</h2>
 			<!--Иконка с мороженым-->
 			<div class="contacts-map">
 				<p>Адрес главного офиса и офлайн-магазина:<br>
@@ -140,10 +138,10 @@
 	</main>
 	<footer class="glassy-footer">
 		<ul class="social-list">
-			<li><a><img src="tweet.png" alt="твиттер"></a></li>
-			<li><a><img src="inst.png" alt="инстаграмм"></a></li>
-			<li><a><img src="facebook.png" alt="фейсбук"></a></li>
-			<li><a><img src="vkontakte.png" alt="вконтакте"></a></li>
+			<li><a href="#"><img src="img/twitter.svg" width="32" height="32" alt="твиттер"></a></li>
+			<li><a href="#"><img src="img/instagram.svg" width="32" height="32" alt="инстаграмм"></a></li>
+			<li><a href="#"><img src="img/fb.svg" width="32" height="32" alt="фейсбук"></a></li>
+			<li><a href="#"><img src="img/vk.svg" width="32" height="32" alt="вконтакте"></a></li>
 		</ul>
 		<ul>
 			<li><a href="#">Для поставщиков</a><li>
@@ -156,5 +154,113 @@
 			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML-academy</a> 2017</p>
 		</div>
 	</footer>
+	
+	<section class="modal main-menu">
+		<h2 class="visually-hidden">Главное меню</h2>
+		<div class="header-popup">
+			<p>Каталог</p>
+		</div>
+		<ul class="main-menu" >
+			<li><a href="#">Новинки</a></li>
+			<li><a href="#">Сливочное</a></li>
+			<li><a href="#">Щербеты</a></li>
+			<li><a href="#">Фруктовый лед</a></li>
+			<li><a href="#">Мелорин</a></li>
+		</ul>
+		<button class="visually-hidden">Закрыть</button>
+	</section>
+	
+	<section class="modal modal-login">
+		<h2 class="visually-hidden">Вход в личный кабинет</h2>
+		<div class="header-popup">
+			<img src="img/entrance.svg" width="21" height="19" alt="иконка входа">
+			<p>Вход</p>
+		</div>
+		<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+			<p>
+				<label class="visually-hidden" for="user-email">Электронная почта</label>
+				<input class="user-email" type="email" name="email" placeholder="Электронная почта" id="user-email">
+			</p>
+			<p>
+				<label class="visually-hidden" for="user-password">Пароль</label>
+				<input class="user-password" type="password" name="password" placeholder="Пароль" id="user-password">
+			</p>
+			<p class="remember-new-login">
+				<a class="restore" href="#">Забыли пароль?</a>
+				<a class="new-registration" href="#">Новая регистрация</a>
+			</p>
+			<button class="button" type="submit">Войти</button>
+		</form>
+		<button class="visually-hidden">Закрыть</button>
+	</section>
+	
+	<section class="modal modal-search">
+		<h2 class="visually-hidden">Поиск по странице</h2>
+		<div class="header-popup">
+			<img src="img/loupe.swg" width="17" height="17" alt="иконка поиска">
+		</div>
+		<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+			<p>
+				<label class="visually-hidden" for="search-query">То, что ищем</label>
+				<input class="search-query" type="text" id="search-query" name="search-query" placeholder="Что ищем?">
+			</p>
+			<button class="visually-hidden" type="submit">Найти</button>
+		</form>
+		<button class="visually-hidden">Закрыть</button>
+	</section>
+	
+	<section class="relation-back">
+		<h2 class="visually-hidden">Форма обратной связи</h2>
+		<p>Мы обязательно вам ответим!</p>
+		<form class="relation-back" action="https://echo.htmlacademy.ru" method="post">
+			<p>
+				<label class="visually-hidden" for="your-name">Ваше имя</label>
+				<input class="client-name" type="text" id="your-name" name="your-name" placeholder="Как Вас зовут?">
+			</p>
+			
+			<p>
+				<label class="visually-hidden" for="your-email">Ваше имя</label>
+				<input class="client-email" type="email" id="your-email" name="your-email" placeholder="Ваша почта для ответа">
+			</p>
+			
+			<p>
+				<label class="visually-hidden" for="your-text">Текст вашего сообщения</label>
+				<textarea class="client-text" id="your-text" name="your-text" placeholder="Напишите что-нибудь..."></textarea>
+			</p>
+			
+			<button class="visually-hidden" type="submit">Отправить</button>
+		</form>
+		<button class="modal-close">Закрыть</button>
+	</section>
+	
+	<section class="modal-cart">
+		<h2 class="visually-hidden">Ваша корзина</h2>
+		<div class="header-popup">
+			<img src="img/basket-red.svg" width="21" height="20" alt="корзина с товаром" >
+			<p>2 товара</p>
+		</div>
+		<form class="cart-send" action="https://echo.htmlacademy.ru" method="post">
+			<table> 
+				<!--таблица с товарами, кнопки удалить пока не работают -->
+				<tr>
+					<td><button class="cart-del">Удалить товар</button></td>
+					<td><img src="#" alt="изображение товара"></td>
+					<td><input name="name-tovar1" id="name-tovar1" value="Пломбир с апельсиновым джемом"></td>
+					<td><input name="mass-tovar1" id="mass-tovar1" value="1,5 кг x"><p class="disabled">200 руб</p></td>
+					<td>300 руб.</td>
+				</tr>
+				<tr>
+					<td><button class="cart-del">Удалить товар</button></td>
+					<td><img src="#" alt="изображение товара"></td>
+					<td><input name="name-tovar2" id="name-tovar2" value="Клубничный пломбир с присыпкой из белого шоколада"></td>
+					<td><input name="mass-tovar2" id="mass-tovar2" value="1,5 кг x"><p class="disabled">300 руб</p></td>
+					<td>450 руб.</td>
+				</tr>
+				
+			</table>
+			<input name="summ" id="summ" value="750">
+			<button class="button" type="submit">Оформить заказ</button>
+		</form>
+	</section>
   </body>
 </html>

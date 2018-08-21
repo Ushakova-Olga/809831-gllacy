@@ -17,7 +17,7 @@
 			</ul>
 			<ul class="user-navigation">
 				<li><a href="#">Поиск</a></li> 
-				<li><a href="#">Вход</a></li> 
+				<li><a class="login-link" href="login.html">Вход</a></li> 
 				<li><a href="#">Корзина</a></li> 
 			</ul>
 		</nav>
@@ -31,24 +31,48 @@
 	</ul>
 	<h1>Сливочное мороженое</h1>
 	
-	<div class="form">
-		<span>Здесь будет форма для запроса поиска по сайту</span>
-		<label>сортировка</label>
-		<span>Здесь будет селект</span>
-	
-		<label>Цена 100-500 руб.</label>
-		<span>Здесь будет бегунок</span>
-	
-		<label>Жирность</label>
-		<span>Здесь будет радиобаттон</span>
+	<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
 		
-		<label>Наполнители</label>
-		<span>Здесь будут чекбоксы</span>
+		<h2 class="visually-hidden">Форма для запроса поиска по сайту</h2>
+		<label for="sort-order">Cортировка:</label>
+		<select name="sort-order" id="sort-order">
+			<option value="opt-popular">По популярности</option>
+			<option value="opt-price">По цене</option>
+		</select>
+	
+		<label for="ranging">Цена 100-500 руб.</label>
+		<input type="range" min="100" max="500" id="ranging" name="ranging">
+			
+		<p>Жирность:</p>
+		<input type="radio" id="rad-1" name="rad" value="rad1">
+		<label for="rad-1">0%</label>
 		
-		<span>Применить</span>
-	</div>
+		<input type="radio" id="rad-2" name="rad" value="rad2">
+		<label for="rad-2">до 10%</label>
+
+		<input type="radio" id="rad-3" name="rad" value="rad3">
+		<label for="rad-3">до 30%</label>
+
+		<input type="radio" id="rad-4" name="rad" value="rad4">
+		<label for="rad-4">выше 30%</label>
+		
+		<p>Наполнители</p>
+		
+		<input type="checkbox" id="check1" name="check1" checked>
+		<label for="check1">шоколадные</label>
+		<input type="checkbox" id="check2" name="check2" checked>
+		<label for="check1">сахарные присыпки</label>
+		<input type="checkbox" id="check3" name="check3" >
+		<label for="check1">фрукты</label>
+		<input type="checkbox" id="check4" name="check4" >
+		<label for="check1">сиропы</label>
+		<input type="checkbox" id="check5" name="check5" >
+		<label for="check1">джемы</label>
+		
+		<button class="button" type="submit">Применить</button>
+	</form>
 	<section class="catalog-items">
-		<h2 class="hidden">Каталог: мороженое на развес</h2>
+		<h2 class="visually-hidden">Каталог: мороженое на развес</h2>
 		<ul class="catalog-list">
 			<li class="catalog-item">
 				<img src="img/product-1.jpg" width="267" height="267" alt="картинка мороженого">
@@ -125,10 +149,10 @@
   </main>
   <footer class="glassy-footer">
 		<ul class="social-list">
-			<li><a><img src="tweet.png" alt="твиттер"></a></li>
-			<li><a><img src="inst.png" alt="инстаграмм"></a></li>
-			<li><a><img src="facebook.png" alt="фейсбук"></a></li>
-			<li><a><img src="vkontakte.png" alt="вконтакте"></a></li>
+			<li><a href="#"><img src="img/twitter.svg" width="32" height="32" alt="твиттер"></a></li>
+			<li><a href="#"><img src="img/instagram.svg" width="32" height="32" alt="инстаграмм"></a></li>
+			<li><a href="#"><img src="img/fb.svg" width="32" height="32" alt="фейсбук"></a></li>
+			<li><a href="#"><img src="img/vk.svg" width="32" height="32" alt="вконтакте"></a></li>
 		</ul>
 		<ul>
 			<li><a href="#">Для поставщиков</a><li>
@@ -141,6 +165,76 @@
 			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML-academy</a> 2017</p>
 		</div>
 	</footer>
+	
+	<section class="modal modal-login">
+		<h2 class="visually-hidden">Вход в личный кабинет</h2>
+		<div class="header-popup">
+			<img src="img/entrance.svg" width="21" height="19" alt="иконка входа">
+			<p>Вход</p>
+		</div>
+		<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+			<p>
+				<label class="visually-hidden" for="user-email">Электронная почта</label>
+				<input class="user-email" type="email" name="email" placeholder="Электронная почта" id="user-email">
+			</p>
+			<p>
+				<label class="visually-hidden" for="user-password">Пароль</label>
+				<input class="user-password" type="password" name="password" placeholder="Пароль" id="user-password">
+			</p>
+			<p class="remember-new-login">
+				<a class="restore" href="#">Забыли пароль?</a>
+				<a class="new-registration" href="#">Новая регистрация</a>
+			</p>
+			<button class="button" type="submit">Войти</button>
+		</form>
+		<button class="visually-hidden">Закрыть</button>
+	</section>
+	
+	<section class="modal modal-search">
+		<h2 class="visually-hidden">Поиск по странице</h2>
+		<div class="header-popup">
+			<img src="img/loupe.swg" width="17" height="17" alt="иконка поиска">
+		</div>
+		<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+			<p>
+				<label class="visually-hidden" for="search-query">То, что ищем</label>
+				<input class="search-query" type="text" id="search-query" name="search-query" placeholder="Что ищем?">
+			</p>
+			<button class="visually-hidden" type="submit">Найти</button>
+		</form>
+		<button class="visually-hidden">Закрыть</button>
+	</section>
+	
+	<section class="modal-cart">
+		<h2 class="visually-hidden">Ваша корзина</h2>
+		<div class="header-popup">
+			<img src="img/basket-red.svg" width="21" height="20" alt="корзина с товаром" >
+			<p>2 товара</p>
+		</div>
+		<form class="cart-send" action="https://echo.htmlacademy.ru" method="post">
+			<table> 
+				<!--таблица с товарами, кнопки удалить пока не работают -->
+				<tr>
+					<td><button class="cart-del">Удалить товар</button></td>
+					<td><img src="#" alt="изображение товара"></td>
+					<td><input name="name-tovar1" id="name-tovar1" value="Пломбир с апельсиновым джемом"></td>
+					<td><input name="mass-tovar1" id="mass-tovar1" value="1,5 кг x"><p class="disabled">200 руб</p></td>
+					<td>300 руб.</td>
+				</tr>
+				<tr>
+					<td><button class="cart-del">Удалить товар</button></td>
+					<td><img src="#" alt="изображение товара"></td>
+					<td><input name="name-tovar2" id="name-tovar2" value="Клубничный пломбир с присыпкой из белого шоколада"></td>
+					<td><input name="mass-tovar2" id="mass-tovar2" value="1,5 кг x"><p class="disabled">300 руб</p></td>
+					<td>450 руб.</td>
+				</tr>
+				
+			</table>
+			<input name="summ" id="summ" value="750">
+			<button class="button" type="submit">Оформить заказ</button>
+		</form>
+	</section>
+	
 	</body>
 </html>
 
