@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог магазина Glassy Shop</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 	<header class="glassy-header">
@@ -11,7 +14,7 @@
 				<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Glassy Shop">
 			</a>
 			<ul class="site-navigation">
-				<li><a class="selected-razdel" href="#">Каталог</a></li>
+				<li class="selected-razdel">Каталог</li>
 				<li><a href="delivery.html">Доставка и оплата</a></li>
 				<li><a href="about_us.html">О компании</a></li>
 			</ul>
@@ -29,47 +32,56 @@
 		<li><a href="catalog.html">Каталог</a></li>
 		<li class="crumbs-current">Сливочное</li>
 	</ul>
-	<h1>Сливочное мороженое</h1>
+	<h1 class="catalog-header">Сливочное мороженое</h1>
 	
-	<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+	<form class="search-form" action="https://echo.htmlacademy.ru" method="post" oninput="left-handle-out.value=range-min.value">
 		
 		<h2 class="visually-hidden">Форма для запроса поиска по сайту</h2>
-		<label for="sort-order">Cортировка:</label>
-		<select name="sort-order" id="sort-order">
+		<label for="sort-order" class="search-headers">Cортировка:</label>
+		<select name="sort-order" id="sort-order" class="search-controls">
 			<option value="opt-popular">По популярности</option>
 			<option value="opt-price">По цене</option>
 		</select>
 	
-		<label for="ranging">Цена 100-500 руб.</label>
-		<input type="range" min="100" max="500" id="ranging" name="ranging">
+		<p class="search-headers">Цена: 100 руб.-500 руб.</p>
+		
+		<!--input type="range" min="100" max="500" id="ranging" name="ranging"-->
+		<!-- Переделала как в лекции посоветовали. Пока не знаю как оживить ручки, оставлю пока так -->
+		<button class="left-handle" id="handle-left" name="handle-left">Левая ручка</button>
+		<button class="right-handle" id="handle-right" name="handle-right">Правая ручка</button>
+		<input type="text" id="range-min" name="range-min" value="100">
+		<input type="text" id="range-max" name="range-max" value="500">
+		
+		<p class="search-headers">Жирность:</p>
+		<div class="search-controls">
+			<input type="radio" id="rad-1" name="rad" value="rad1">
+			<label for="rad-1" >0%</label>
 			
-		<p>Жирность:</p>
-		<input type="radio" id="rad-1" name="rad" value="rad1">
-		<label for="rad-1">0%</label>
-		
-		<input type="radio" id="rad-2" name="rad" value="rad2">
-		<label for="rad-2">до 10%</label>
+			<input type="radio" id="rad-2" name="rad" value="rad2">
+			<label for="rad-2" >до 10%</label>
 
-		<input type="radio" id="rad-3" name="rad" value="rad3">
-		<label for="rad-3">до 30%</label>
+			<input type="radio" id="rad-3" name="rad" value="rad3">
+			<label for="rad-3" >до 30%</label>
 
-		<input type="radio" id="rad-4" name="rad" value="rad4">
-		<label for="rad-4">выше 30%</label>
+			<input type="radio" id="rad-4" name="rad" value="rad4">
+			<label for="rad-4" >выше 30%</label>
+		</div>
 		
-		<p>Наполнители</p>
+		<p class="search-headers">Наполнители</p>
+		<div class="search-controls">
+			<input type="checkbox" id="check1" name="check1" checked>
+			<label for="check1" >шоколадные</label>
+			<input type="checkbox" id="check2" name="check2" checked>
+			<label for="check1" >сахарные присыпки</label>
+			<input type="checkbox" id="check3" name="check3" >
+			<label for="check1" >фрукты</label>
+			<input type="checkbox" id="check4" name="check4" >
+			<label for="check1" >сиропы</label>
+			<input type="checkbox" id="check5" name="check5" >
+			<label for="check1">джемы</label>
+		</div>
 		
-		<input type="checkbox" id="check1" name="check1" checked>
-		<label for="check1">шоколадные</label>
-		<input type="checkbox" id="check2" name="check2" checked>
-		<label for="check1">сахарные присыпки</label>
-		<input type="checkbox" id="check3" name="check3" >
-		<label for="check1">фрукты</label>
-		<input type="checkbox" id="check4" name="check4" >
-		<label for="check1">сиропы</label>
-		<input type="checkbox" id="check5" name="check5" >
-		<label for="check1">джемы</label>
-		
-		<button class="button" type="submit">Применить</button>
+		<button class="button search-controls" type="submit" >Применить</button>
 	</form>
 	<section class="catalog-items">
 		<h2 class="visually-hidden">Каталог: мороженое на развес</h2>
@@ -77,17 +89,17 @@
 			<li class="catalog-item">
 				<img src="img/product-1.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>310 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-				<h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+				<h3><a href="img/product-1.jpg">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
 			</li>
 			<li class="catalog-item">
 				<img src="img/product-2.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>380 <!--Здесь будет вставлена иконка рубля--> /кг</span>
-				<h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+				<h3><a href="img/product-2.jpg">Сливочно-кофейное с кусочками шоколада</a></h3>
 			</li>
 			<li class="catalog-item">
 				<img src="img/product-3.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>355 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-				<h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+				<h3><a href="img/product-3.jpg">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
 			</li>
 			<li class="catalog-item">
 				<img src="img/product-4.jpg" width="267" height="267" alt="картинка мороженого">
@@ -154,7 +166,7 @@
 			<li><a href="#"><img src="img/fb.svg" width="32" height="32" alt="фейсбук"></a></li>
 			<li><a href="#"><img src="img/vk.svg" width="32" height="32" alt="вконтакте"></a></li>
 		</ul>
-		<ul>
+		<ul class="bottom-list">
 			<li><a href="#">Для поставщиков</a><li>
 			<li><a href="#">О производстве</a><li>
 			<li><a href="#">Наши документы</a><li>
@@ -193,7 +205,7 @@
 	<section class="modal modal-search">
 		<h2 class="visually-hidden">Поиск по странице</h2>
 		<div class="header-popup">
-			<img src="img/loupe.swg" width="17" height="17" alt="иконка поиска">
+			<img src="img/loupe.svg" width="17" height="17" alt="иконка поиска">
 		</div>
 		<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
 			<p>
@@ -216,14 +228,14 @@
 				<!--таблица с товарами, кнопки удалить пока не работают -->
 				<tr>
 					<td><button class="cart-del">Удалить товар</button></td>
-					<td><img src="#" alt="изображение товара"></td>
+					<td><img src="img/product-1-small.jpg" width="33" height="33" alt="изображение товара"></td>
 					<td><input name="name-tovar1" id="name-tovar1" value="Пломбир с апельсиновым джемом"></td>
 					<td><input name="mass-tovar1" id="mass-tovar1" value="1,5 кг x"><p class="disabled">200 руб</p></td>
 					<td>300 руб.</td>
 				</tr>
 				<tr>
 					<td><button class="cart-del">Удалить товар</button></td>
-					<td><img src="#" alt="изображение товара"></td>
+					<td><img src="img/product-3-small.jpg" width="33" height="33" alt="изображение товара"></td>
 					<td><input name="name-tovar2" id="name-tovar2" value="Клубничный пломбир с присыпкой из белого шоколада"></td>
 					<td><input name="mass-tovar2" id="mass-tovar2" value="1,5 кг x"><p class="disabled">300 руб</p></td>
 					<td>450 руб.</td>

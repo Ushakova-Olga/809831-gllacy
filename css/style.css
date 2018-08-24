@@ -1,0 +1,341 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #849d8f;
+ }
+
+/* Пыталась вставить фоновое изображение в slide и в main, но оказалось что надо фоном вставлять в body, 
+т.к. некоторые надписи из шапки наползают на картинку, в частности время работы и телефон. 
+Переносить эти надписи из шапки в слайды нелогично.
+Как-то надо будет при переключении слайдера менять свойства main-body, 
+только как это сделать не понимаю пока. */
+
+.main-body {
+	/* Фон 1 */
+	background-image: url("../img/slide1-background.png"); 
+	background-color: #849d8f;
+	
+	/* Фон 2 */
+	/*background-image: url("../img/slide2-background.png"); 
+	background-color: #8996a6;*/
+	
+	/* Фон 3 */
+	/*background-image: url("../img/slide2-background.png"); 
+	background-color: #9d8b84;*/
+	
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+a {
+	text-decoration: none;
+}
+
+.site-navigation,
+.user-navigation, 
+.switch,
+.banners-list, 
+.features-list,
+.hits-list,
+.social-list,
+.bottom-list,
+.crumbs,
+.catalog-list,
+.pagination-list,
+.main-menu {
+  list-style: none;
+}
+
+.site-navigation a{
+	line-height: 18px;
+}
+
+.user-navigation a {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+}
+
+.slide h3 {
+	font-size: 60px;
+	line-height: 60.35px;
+}
+
+.quick_order {
+	font-size: 32px;
+	line-height: 44px;
+}
+
+.banners-list h3 {
+	font-size: 35px;
+	line-height: 41px;	
+}
+
+.banners-list p {
+	font-size: 18px;
+	line-height: 24px;	
+}
+
+.banners-list button {
+	font-size: 18px;
+	line-height: 24px;	
+}
+
+.catalog-item span {
+	font-size: 45px;
+	line-height: 45px;
+}
+
+.catalog-item a {
+	line-height: 22px;
+	font-weight: 500;
+}
+
+.features h2 {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 500;
+	color: #323232;
+}
+
+.features p {
+	line-height: 22px;
+	font-weight: 400;
+	color: #323232;
+}
+
+.news h2 {
+	line-height: 22px;
+	font-weight: 500;
+	color: #323232;
+}
+
+.news a {
+	font-size: 24px;
+	line-height: 30px;
+	text-decoration: underline;
+	color: #323232;
+}
+
+.news {
+	background-image: url("../img/background-3.jpg"); 
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+.mailer p {
+	line-height: 22px;
+	font-weight: 400;
+	color: #5a5a5a;
+	
+}
+
+.mailer input {
+	line-height: 24px;
+	font-weight: 400;
+	color: #999999;
+	
+}
+
+.mailer button,
+.map button {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.mailer {
+	background: #ffffff;
+}
+
+.p1 {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #323232;
+}
+
+.p2 {
+	font-size: 18px;
+	line-height: 24px;
+	color: #323232;
+}
+
+.p3 {
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 400;
+	color: #323232;
+}
+
+.p4 {
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 400;
+	color: #323232;
+}
+
+
+.bottom-list a {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+	
+}
+
+.bottom-list li:first-child a {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 700;
+	
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus
+ {
+  color: #000000;
+  background-color: rgb(247, 246, 243);
+  
+}
+.site-navigation a,
+.user-navigation a ,
+.hits-list a,
+.main-menu a,
+.crumbs a,
+.catalog-list a,
+.pagination-list a,
+.bottom-list a,
+.copyright a,
+.remember-new-login a {
+	color: #ffffff;
+	
+}
+
+.site-navigation a,
+.catalog-list a,
+.hits-list a,
+.bottom-list a,
+.copyright a,
+.crumbs a {
+	text-decoration: underline;
+}
+
+.hits-list a:hover,
+.hits-list a:focus,
+.crumbs a:hover,
+.crumbs a:focus,
+.catalog-list a:hover,
+.catalog-list a:focus,
+.pagination-list a:hover,
+.pagination-list a:focus,
+.bottom-list a:hover,
+.bottom-list a:focus,
+.copyright a:hover,
+.copyright a:focus,
+.remember-new-login a:hover,
+.remember-new-login a:focus
+{
+	color: #ffbc9e;
+}
+
+.banner-1  {
+	background-image: url("../img/background-1.jpg"); 
+	background-position: center center;
+	background-repeat: repeat;
+}
+
+.banner-2  {
+	background-image: url("../img/background-2.jpg"); 
+	background-position: center center;
+	background-repeat: repeat;
+}
+
+.button {
+  font: inherit;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+ }
+
+.button:hover {
+  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+  
+}
+
+.button:focus {
+  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+ }
+
+.features {
+	background-color: #ede0c5;
+	background-image: url("../img/vafl.jpg"); 
+	background-position: center center;
+	background-repeat: repeat;
+	color: #323232;
+}
+
+
+.feature-item {
+	text-align: left;	
+}
+
+.feature-item h2 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.map {
+	background-image: url("../img/map.jpg"); 
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.contacts-map {
+	background: #ffffff;
+	color: #000000;
+}
+
+.selected-razdel {
+	background: #d07058;
+}
+
+.crumbs  {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+}
+
+.catalog-header {
+	font-size: 35px;
+	line-height: 41px;
+}
+
+.search-headers {
+	font-size:14px;
+	line-height: 16px;
+	font-weight: 500;
+}
+
+.search-controls {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	background-color: rgba(248, 247, 244, 0.2);
+	color: #ffffff;
+
+}
