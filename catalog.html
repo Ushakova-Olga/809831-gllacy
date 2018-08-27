@@ -6,8 +6,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	
   </head>
-  <body>
+  <body class="inner-body">
 	<header class="glassy-header">
 		<nav class="glassy-navigation">
 			<a class="glassy-logo" href="index.html">
@@ -34,54 +35,68 @@
 	</ul>
 	<h1 class="catalog-header">Сливочное мороженое</h1>
 	
-	<form class="search-form" action="https://echo.htmlacademy.ru" method="post" oninput="left-handle-out.value=range-min.value">
+	<form class="search-form form" action="https://echo.htmlacademy.ru" method="post" oninput="left-handle-out.value=range-min.value">
 		
 		<h2 class="visually-hidden">Форма для запроса поиска по сайту</h2>
 		<label for="sort-order" class="search-headers">Cортировка:</label>
-		<select name="sort-order" id="sort-order" class="search-controls">
-			<option value="opt-popular">По популярности</option>
-			<option value="opt-price">По цене</option>
+		<select name="sort-order" id="sort-order" class="search-controls filter-select">
+			<option value="opt-popular">по популярности</option>
+			<option value="opt-p">сначала недорогие</option>
+			<option value="opt-p2">сначала дорогие</option>
+			<option value="opt-zhir">по жирности</option>
 		</select>
 	
-		<p class="search-headers">Цена: 100 руб.-500 руб.</p>
+		<fieldset class="range">
+			<div class="range-controls">
+				<label class="range-label" for="price-min">
+				Цена: <output name="priceOutput" aria-hidden="true"></output> руб.-
+				</label>
+				<input class="visually-hidden" id="price-min" type="range" name="price" min="0" max="700" step="50" value="100">
+				<label class="range-lever range-lever-min" for="price-min" aria-hidden="true"></label>
+				<label class="range-label" for="price-max">
+					<output name="priceOutput" aria-hidden="true"></output> руб.
+				</label>
+				<input class="range-input visually-hidden" id="price-max" type="range" name="price" min="0" max="700" step="50" value="500">
+				<label class="range-lever range-lever-max" for="price-max" aria-hidden="true"></label>
+				<div class="range-scale">
+					<div class="range-bar"></div>
+				</div>
+			</div>
+		 </fieldset>
+  	
+	<script  src="js/script.js"></script>
 		
-		<!--input type="range" min="100" max="500" id="ranging" name="ranging"-->
-		<!-- Переделала как в лекции посоветовали. Пока не знаю как оживить ручки, оставлю пока так -->
-		<button class="left-handle" id="handle-left" name="handle-left">Левая ручка</button>
-		<button class="right-handle" id="handle-right" name="handle-right">Правая ручка</button>
-		<input type="text" id="range-min" name="range-min" value="100">
-		<input type="text" id="range-max" name="range-max" value="500">
 		
 		<p class="search-headers">Жирность:</p>
 		<div class="search-controls">
-			<input type="radio" id="rad-1" name="rad" value="rad1">
+			<input class="filter-input"  type="radio" id="rad-1" name="rad" value="rad1">
 			<label for="rad-1" >0%</label>
 			
-			<input type="radio" id="rad-2" name="rad" value="rad2">
+			<input class="filter-input"  type="radio" id="rad-2" name="rad" value="rad2">
 			<label for="rad-2" >до 10%</label>
 
-			<input type="radio" id="rad-3" name="rad" value="rad3">
+			<input class="filter-input"  type="radio" id="rad-3" name="rad" value="rad3">
 			<label for="rad-3" >до 30%</label>
 
-			<input type="radio" id="rad-4" name="rad" value="rad4">
+			<input class="filter-input"  type="radio" id="rad-4" name="rad" value="rad4" >
 			<label for="rad-4" >выше 30%</label>
 		</div>
 		
 		<p class="search-headers">Наполнители</p>
 		<div class="search-controls">
-			<input type="checkbox" id="check1" name="check1" checked>
+			<input class="filter-input" type="checkbox" id="check1" name="check1" checked>
 			<label for="check1" >шоколадные</label>
-			<input type="checkbox" id="check2" name="check2" checked>
-			<label for="check1" >сахарные присыпки</label>
-			<input type="checkbox" id="check3" name="check3" >
-			<label for="check1" >фрукты</label>
-			<input type="checkbox" id="check4" name="check4" >
-			<label for="check1" >сиропы</label>
-			<input type="checkbox" id="check5" name="check5" >
-			<label for="check1">джемы</label>
+			<input class="filter-input" type="checkbox" id="check2" name="check2" checked>
+			<label for="check2" >сахарные присыпки</label>
+			<input class="filter-input" type="checkbox" id="check3" name="check3" >
+			<label for="check3" >фрукты</label>
+			<input class="filter-input" type="checkbox" id="check4" name="check4" >
+			<label for="check4" >сиропы</label>
+			<input class="filter-input" type="checkbox" id="check5" name="check5" >
+			<label for="check5">джемы</label>
 		</div>
 		
-		<button class="button search-controls" type="submit" >Применить</button>
+		<button class="filter-button search-controls" type="submit" >Применить</button>
 	</form>
 	<section class="catalog-items">
 		<h2 class="visually-hidden">Каталог: мороженое на развес</h2>
@@ -167,7 +182,7 @@
 			<li><a href="#"><img src="img/vk.svg" width="32" height="32" alt="вконтакте"></a></li>
 		</ul>
 		<ul class="bottom-list">
-			<li><a href="#">Для поставщиков</a><li>
+			<li class="for-suppliers"><a href="#">Для поставщиков</a><li>
 			<li><a href="#">О производстве</a><li>
 			<li><a href="#">Наши документы</a><li>
 			<li><a href="#">Экологические стандарты</a><li>
@@ -217,7 +232,7 @@
 		<button class="visually-hidden">Закрыть</button>
 	</section>
 	
-	<section class="modal-cart">
+	<section class="modal modal-cart">
 		<h2 class="visually-hidden">Ваша корзина</h2>
 		<div class="header-popup">
 			<img src="img/basket-red.svg" width="21" height="20" alt="корзина с товаром" >
@@ -248,5 +263,6 @@
 	</section>
 	
 	</body>
+	
 </html>
 

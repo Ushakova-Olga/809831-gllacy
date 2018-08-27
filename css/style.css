@@ -5,7 +5,8 @@ body {
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
-  background-color: #849d8f;
+   
+ 
  }
 
 /* Пыталась вставить фоновое изображение в slide и в main, но оказалось что надо фоном вставлять в body, 
@@ -29,6 +30,11 @@ body {
 	
 	background-position: top center;
 	background-repeat: no-repeat;
+}
+
+.inner-body {
+	
+	background-color: #849d8f;
 }
 
 a {
@@ -63,11 +69,6 @@ a {
 .slide h3 {
 	font-size: 60px;
 	line-height: 60.35px;
-}
-
-.quick_order {
-	font-size: 32px;
-	line-height: 44px;
 }
 
 .banners-list h3 {
@@ -186,7 +187,7 @@ a {
 	
 }
 
-.bottom-list li:first-child a {
+.for-suppliers  a {
 	font-size: 13px;
 	line-height: 18px;
 	font-weight: 700;
@@ -198,9 +199,8 @@ a {
 .user-navigation a:hover,
 .user-navigation a:focus
  {
-  color: #000000;
-  background-color: rgb(247, 246, 243);
-  
+	color: #000000;
+	background-color: rgb(247, 246, 243);
 }
 .site-navigation a,
 .user-navigation a ,
@@ -210,10 +210,15 @@ a {
 .catalog-list a,
 .pagination-list a,
 .bottom-list a,
-.copyright a,
-.remember-new-login a {
+.copyright a
+{
 	color: #ffffff;
 	
+}
+
+.remember-new-login a {
+	color: #323232;
+	border-bottom: 1px solid #adacaa;
 }
 
 .site-navigation a,
@@ -222,7 +227,8 @@ a {
 .bottom-list a,
 .copyright a,
 .crumbs a {
-	text-decoration: underline;
+	/*Вместо text-decoration: underline;*/
+	border-bottom: 1px solid #b0c0b7;
 }
 
 .hits-list a:hover,
@@ -236,11 +242,23 @@ a {
 .bottom-list a:hover,
 .bottom-list a:focus,
 .copyright a:hover,
-.copyright a:focus,
+.copyright a:focus
+{
+	color: #ffbc9e;
+	border-bottom: 1px solid #a7a294;
+}
+
+.pagination-list a:hover,
+.pagination-list a:focus
+{
+	color: #ffbc9e;
+}
+
 .remember-new-login a:hover,
 .remember-new-login a:focus
 {
-	color: #ffbc9e;
+	color: #e84d37;
+	border-bottom: 1px solid #f9cdc4;
 }
 
 .banner-1  {
@@ -271,7 +289,6 @@ a {
   background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
-  
 }
 
 .button:focus {
@@ -280,6 +297,11 @@ a {
   background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
  }
+ 
+ .quick_order {
+	font-size: 32px;
+	line-height: 44px;
+}
 
 .features {
 	background-color: #ede0c5;
@@ -337,5 +359,143 @@ a {
 	font-weight: 500;
 	background-color: rgba(248, 247, 244, 0.2);
 	color: #ffffff;
+}
 
+/* Для сортировки  */
+label + .search-controls:hover {
+	
+	color: #000000; 
+}
+.search-controls:focus{
+	background-color: rgb(255, 255, 255);
+	color: #000000; 
+}
+
+
+.filter-input:disabled  + label {
+	color: #ffffff;
+	opacity: 0.5;
+}
+
+.filter-select:disabled   {
+	color: #ffffff;
+	opacity: 0.5;
+}
+
+.filter-button  {
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, 0.188);
+ }
+
+.filter-button:hover,
+.filter-button:focus
+  {
+	background-color: rgb(255, 255, 255);
+	color: #323232; 
+}
+
+.modal {
+	 border-radius: 5px;
+	background-color: rgb(248, 247, 244); 
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+	color: #323232; 
+	
+}
+
+.modal a {
+	color: #323232; 
+}
+
+.catalog-item:focus,
+.catalog-item:hover
+  {
+	border-radius: 5px;
+	background-color: rgba(248, 247, 244, 0.2); 
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.05);
+	/* Заменила значение для тени, фотошоп выжает 0.4 непрозрачность, но при просмотре с такими параметрами тень выглядит слишком черной */
+  }
+  
+  /*  ----------------------------- */
+  
+ /* body {*/
+  /*height: 100vh;
+  margin: 0;
+  font-weight: 400;
+  font-family: PT Sans, Arial, sans-serif;*/
+/*}*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.range {
+  width: 176px; /*Ширина линейки с макета в фотошопе*/
+  padding: 0;
+  border: none;
+}
+
+/* отступы сверху снизу */
+.range-controls {
+  position: relative;
+  /*height: 32px;*/
+  margin-top: 9px;
+  margin-bottom: 30px;
+}
+
+.range-label {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.range-scale {
+  position: relative;
+  bottom: -22px;
+  width: 100%;
+  height: 4px;
+  background: #cbd4cd;  
+}
+
+.range-bar {
+  position: absolute;
+  left: calc(100% * 100 / 700);
+  right: calc(100% * (700 - 500) / 700);
+  height: 4px;
+  background: #f8f7f4; 
+}
+
+.range-lever {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: -33px;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  background: hsl(0, 0%, 67%);
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer; 
+ }
+
+.range-lever:active {
+	cursor: pointer;
+ }
+
+.range-lever-min {
+  left: calc(100% * 100 / 700 - 20px / 2);
+}
+
+.range-lever-max {
+  left: calc(100% * 500 / 700 - 20px / 2);
 }
