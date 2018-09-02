@@ -499,3 +499,330 @@ label + .search-controls:hover {
 .range-lever-max {
   left: calc(100% * 500 / 700 - 20px / 2);
 }
+/* Сеточные стили.    */
+.glassy-header {
+	margin-bottom: 284px;
+	
+	min-height: 113px;
+	margin-bottom: 286; /* отступ от шапки до текста в слайдере  */
+}
+
+.glassy-header p {
+	text-align: right;
+	margin-right: 40px;
+	 
+}
+
+.glassy-navigation {
+	width: 1150px;
+	min-height: 33px; /*74px; Вот с этими высотами запуталась. В итоге взяла просто высоту шрифта, а отступ попытаюсь задать по-другому*/
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	margin-left: 27px;
+	margin-top: 10px;	
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.glassy-logo {
+	
+	width: 154px;
+	height: 64px;
+	
+	/*display: block;*/
+}
+
+
+.site-navigation {
+	width: 349px;
+  
+  
+	list-style: none;
+  
+	/* Временно для сетки */
+	min-height: 16px; /*47px;*/
+	display: flex;
+	justify-content: space-between;
+  
+}
+
+.user-navigation {
+	width: 244px;
+ 
+	margin: 0;
+	padding: 0;
+  
+	list-style: none;
+  
+	/* Временно для сетки */
+	min-height: 33px; /*57px;*/
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+.slider {
+	margin: 0;
+	padding: 0;
+	
+	min-height: 209px;
+	
+	display; flex;
+	
+	justify-content: space-between;
+	
+}
+
+.slide {
+	
+	min-height: 209px;
+	width: 666px;
+}
+
+.banners {
+	margin: 0;
+	padding: 0;
+	min-height: 232px;
+	margin-bottom: 40px;
+	width: 1145px;
+}
+
+.banners-list {
+	margin: 0;
+	padding: 0;
+	min-height: 232px;
+	display: flex;
+	width: 1146px;
+	justify-content: space-between;	
+	margin-left: 27px;
+}
+
+.banner-1 {
+	min-height: 232px;
+	width: 560px;
+}
+
+.banner-2 {
+	min-height: 232px;
+	width: 560px;
+}
+
+.hits {
+	margin: 0;
+	padding: 0;
+	min-height: 324px;
+	width: 1146px;
+	
+	
+}
+
+.hits-list{
+	margin: 0;
+	padding: 0;
+	min-height: 324px;
+	width: 1146px;
+	display: flex;
+	justify-content: space-between;
+	
+	margin-left: 27px;
+}
+
+.catalog-item{
+	min-height: 324px;
+	width: 270px;
+	
+}
+
+.features {
+	width: 1146px;
+	min-height: 307px;
+	margin: 0;
+	margin-left: 27px;
+	margin-bottom: 40px;
+	
+}
+
+.features h2 {
+	margin-left: 27px;
+	
+}
+
+.features-list {
+	width: 1146px;
+	height: 212px; /* Задала фиксированную высоту, т.к. иначе не переносятся элементы списка во вторую колонку. 
+Считается ли это ошибкой? Если да, тогда надо делать два списка в 2 разных контейнера-колонки?	*/
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.feature-item {
+	
+	width: 535px;
+	min-height: 100px;
+}
+
+.news-container {
+	width: 1146px;
+	margin: 0;
+	padding: 0;
+	margin-left: 27px;
+	margin-bottom: 40px;
+	
+	min-height: 221px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.news {margin: 0;
+	padding: 0;
+	width: 563px;
+	min-height: 221px;
+}
+
+.mailer {margin: 0;
+	padding: 0;
+	width: 563px;
+	min-height: 221px;
+}
+
+.map {
+	
+	width: 1200px;
+	min-height: 430px;
+	background-image: url("../img/map.jpg"); 
+	display: flex;
+	justify-content: flex-end;
+}
+
+.contacts-map {
+	
+	width: 308px;
+	min-height: 306px;
+	margin-top: 63px;
+	margin-right: 26px;
+	margin-bottom: 62px;
+	padding-bottom: 19px;
+}
+
+.contacts-map p,
+.contacts-map a
+ {
+	
+	margin-left: 26px;
+}
+
+.glassy-footer{
+	
+	display: flex;
+	justify-content: space-between;
+} 
+
+.social-list {
+	width: 190px;
+	min-height:43px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottom-list {
+	width: 328px;
+	min-height: 38px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	
+	
+}
+
+.copyright {
+	width: 189px;
+	min-height: 59px;
+	
+}
+
+.time-crumbs {
+	min-height: 39px;
+	width: 1200px;
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+.time-crumbs {
+	order: 2;
+}
+
+.crumbs {
+	order: -1;
+	display: flex;
+	justify-content: space-between;
+	width: 221px;
+}
+
+.inner {
+	margin-bottom: 0;
+	min-height: 74px;
+}
+
+.catalog-items {
+	margin: 0;
+	padding: 0;
+	min-height: 324px;
+	width: 1146px;
+	
+	
+}
+
+.catalog-list{
+	margin: 0;
+	padding: 0;
+	min-height: 324px;
+	width: 1146px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+	margin-left: 27px;
+}
+
+.pagination {
+	display: flex;
+	justify-content: flex-end;
+	
+	min-height:28px;
+	
+	
+}
+.pagination-list {
+	display: flex;
+	justify-content: space-between;
+	width: 194px;
+	
+}
+
+.first-row-sort
+{
+	display: flex;
+	justify-content: space-between;
+	width: 861px;
+	margin-left: 28px;
+	min-height: 60px;
+	padding-bottom: 16px;
+}
+
+.second-row-sort
+{
+	display: flex;
+	justify-content: space-between;
+	width: 861px;
+	margin-left: 28px;
+	min-height: 60px;
+	padding-bottom: 40px;
+	
+}

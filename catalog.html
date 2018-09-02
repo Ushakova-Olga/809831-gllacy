@@ -9,35 +9,41 @@
 	
   </head>
   <body class="inner-body">
-	<header class="glassy-header">
-		<nav class="glassy-navigation">
-			<a class="glassy-logo" href="index.html">
-				<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Glassy Shop">
-			</a>
-			<ul class="site-navigation">
-				<li class="selected-razdel">Каталог</li>
-				<li><a href="delivery.html">Доставка и оплата</a></li>
-				<li><a href="about_us.html">О компании</a></li>
-			</ul>
-			<ul class="user-navigation">
-				<li><a href="search.html">Поиск</a></li> 
-				<li><a class="login-link" href="login.html">Вход</a></li> 
-				<li><a href="cart.html">Корзина</a></li> 
-			</ul>
+	<header class="glassy-header inner">
+		<nav class="glassy-navigation ">
+			
+				<a class="glassy-logo" href="index.html">
+					<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Glassy Shop">
+				</a>
+				<ul class="site-navigation">
+					<li class="selected-razdel">Каталог</li>
+					<li><a href="delivery.html">Доставка и оплата</a></li>
+					<li><a href="about_us.html">О компании</a></li>
+				</ul>
+				<ul class="user-navigation">
+					<li><a href="search.html">Поиск</a></li> 
+					<li><a class="login-link" href="login.html">Вход</a></li> 
+					<li><a href="cart.html">Корзина</a></li> 
+				</ul>
+			
 		</nav>
-		<p>C 10 до 20 ежедневно<br>8 818 450-25-25<br></p>
+		
 	</header>
   <main>
-	<ul class="crumbs">
-		<li><a href="index.html">Главная</a></li>
-		<li><a href="catalog.html">Каталог</a></li>
-		<li class="crumbs-current">Сливочное</li>
-	</ul>
+	<div class="time-crumbs">
+		<p>C 10 до 20 ежедневно<br>8 818 450-25-25<br></p>
+		<ul class="crumbs">
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="catalog.html">Каталог</a></li>
+			<li class="crumbs-current">Сливочное</li>
+		</ul>
+	</div>
 	<h1 class="catalog-header">Сливочное мороженое</h1>
 	
 	<form class="search-form form" action="https://echo.htmlacademy.ru" method="post" oninput="left-handle-out.value=range-min.value">
 		
 		<h2 class="visually-hidden">Форма для запроса поиска по сайту</h2>
+		<div class="first-row-sort">
 		<label for="sort-order" class="search-headers">Cортировка:</label>
 		<select name="sort-order" id="sort-order" class="search-controls filter-select">
 			<option value="opt-popular">по популярности</option>
@@ -81,7 +87,8 @@
 			<input class="filter-input"  type="radio" id="rad-4" name="rad" value="rad4" >
 			<label for="rad-4" >выше 30%</label>
 		</div>
-		
+		</div>
+		<div class="second-row-sort">
 		<p class="search-headers">Наполнители</p>
 		<div class="search-controls">
 			<input class="filter-input" type="checkbox" id="check1" name="check1" checked>
@@ -97,6 +104,7 @@
 		</div>
 		
 		<button class="filter-button search-controls" type="submit" >Применить</button>
+		</div>
 	</form>
 	<section class="catalog-items">
 		<h2 class="visually-hidden">Каталог: мороженое на развес</h2>
@@ -162,15 +170,17 @@
 				<h3><a href="#">Сливочное с мятным сиропом</a></h3>
 			</li>
 		</ul>
-		<ul class="pagination-list">
-			<li class="pagination-unable"><a href="#"><!--Здесь будет иконка назад --></a></li>
-			<li class="pagination-current"><a href="#">1</a></li>
-			<li class="pagination-item"><a href="#">2</a></li>
-			<li class="pagination-item"><a href="#">3</a></li>
-			<li class="pagination-item"><a href="#">4</a></li>
-			<li class="pagination-item"><a href="#">5</a></li>
-			<li class="pagination-item"><a href="#"><!--Здесь будет иконка вперед --></a></li>
-		</ul>
+		<div class="pagination">
+			<ul class="pagination-list">
+				<li class="pagination-unable"><a href="#"><!--Здесь будет иконка назад --></a></li>
+				<li class="pagination-current"><a href="#">1</a></li>
+				<li class="pagination-item"><a href="#">2</a></li>
+				<li class="pagination-item"><a href="#">3</a></li>
+				<li class="pagination-item"><a href="#">4</a></li>
+				<li class="pagination-item"><a href="#">5</a></li>
+				<li class="pagination-item"><a href="#"><!--Здесь будет иконка вперед --></a></li>
+			</ul>
+		</div>
 	</section>
 		
   </main>
