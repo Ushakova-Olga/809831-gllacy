@@ -264,13 +264,13 @@ a {
 .banner-1  {
 	background-image: url("../img/background-1.jpg"); 
 	background-position: center center;
-	background-repeat: repeat;
+	background-repeat: no-repeat;
 }
 
 .banner-2  {
 	background-image: url("../img/background-2.jpg"); 
 	background-position: center center;
-	background-repeat: repeat;
+	background-repeat: no-repeat;
 }
 
 .button {
@@ -580,7 +580,9 @@ label + .search-controls:hover {
 .slide {
 	min-height: 209px;
 	
-	width: 1070px; /*700px;*/
+	/*width: 1070px; /*700px;*/
+	flex-grow: 1;
+	
 	text-align: center;
 	
 }
@@ -589,6 +591,7 @@ label + .search-controls:hover {
 	margin: 0;
 	padding: 0;
 	padding-bottom: 40px;
+	
 }
 
 
@@ -599,7 +602,8 @@ label + .search-controls:hover {
 }
 
 .switch {
-	width: 130px;
+	padding-left: 27px;
+	width: 80px; /*130px;*/
 	min-height: 20px;
 	display: flex;
 	align-items: flex-end;
@@ -627,11 +631,15 @@ label + .search-controls:hover {
 .banner-1 {
 	min-height: 232px;
 	width: 560px;
+	border: 0px solid rgba(0, 0, 0, 0);
+	border-radius: 18px;
 }
 
 .banner-2 {
 	min-height: 232px;
 	width: 560px;
+	border: 0px solid rgba(0, 0, 0, 0);
+	border-radius: 18px;
 }
 
 .hits {
@@ -673,6 +681,8 @@ label + .search-controls:hover {
 	margin: 0;
 	margin-left: 27px;
 	margin-bottom: 40px;
+	border: 0px solid rgba(0, 0, 0, 0);
+	border-radius: 18px;
 	
 }
 
@@ -708,18 +718,23 @@ label + .search-controls:hover {
 	min-height: 221px;
 	display: flex;
 	justify-content: space-between;
+	
 }
 
 .news {margin: 0;
 	padding: 0;
 	width: 563px;
 	min-height: 221px;
+	border: 0px solid rgba(0, 0, 0, 0);
+	border-radius: 18px;
 }
 
 .mailer {margin: 0;
 	padding: 0;
 	width: 563px;
 	min-height: 221px;
+	border: 0px solid rgba(0, 0, 0, 0);
+	border-radius: 18px;
 }
 
 .map {
@@ -739,6 +754,8 @@ label + .search-controls:hover {
 	margin-right: 26px;
 	margin-bottom: 62px;
 	padding-bottom: 19px;
+	border: 0px solid rgba(0, 0, 0, 0);
+	border-radius: 18px;
 }
 
 .contacts-map p,
