@@ -32,39 +32,39 @@
 		<section class="slider">
 		<!--   Здесь будет слайдер, который будет переключать слайды  -->
 			<h2 class="visually-hidden">Акции на мороженое в рожках! Скидки!</h2>
-			<div class="slide">
-				<h3>Крем-брюле и пломбир с малиновым джемом</h3>
-				<!--Изображение планирую вставить как background-image при стилизации -->
-				<button class="quick_order button">Давайте оба!</button>
+			<div class="slider-columns">
+				<div class="slide">
+					<h3>Крем-брюле и пломбир<br>с малиновым джемом</h3>
+					<!--Изображение планирую вставить как background-image при стилизации -->
+					<button class="quick_order button">Давайте оба!</button>
+				</div>
+				<div class="slide visually-hidden">
+					<h3>Шоколадный пломбир и лимонный сорбет</h3>
+					<button class="quick_order  button">Давайте оба!</button>
+				</div>
+				<div class="slide visually-hidden">
+					<h3>Пломбир с помадкой и клубничный щербет</h3>
+					<button class="quick_order  button">Давайте оба!</button>
+				</div>
+				<ul class="switch">
+				<!--Переделала как рекомедовали в лекции - сделать содержимое списка кнопками -->
+					<li class="slide-rad">
+						<button class="slide-btn" type="button">
+							<!-- Слайд N1 -->
+						</button>
+					</li>
+					<li class="slide-rad">
+						<button class="slide-btn" type="button">
+							<!-- Слайд N2 -->
+						</button>
+					</li>
+					<li class="slide-red">
+						<button class="slide-btn" type="button">
+							<!-- Слайд N3 -->
+						</button>
+					</li>
+				</ul>
 			</div>
-			<div class="slide">
-				<h3>Шоколадный пломбир и лимонный сорбет</h3>
-				<!--Изображение планирую вставить как background-image при стилизации -->
-				<button class="quick_order  button">Давайте оба!</button>
-			</div>
-			<div class="slide">
-				<h3>Пломбир с помадкой и клубничный щербет</h3>
-				<!--Изображение планирую вставить как background-image при стилизации -->
-				<button class="quick_order  button">Давайте оба!</button>
-			</div>
-			<ul class="switch">
-			<!--Переделала как рекомедовали в лекции - сделать содержимое списка кнопками -->
-				<li class="slide-rad">
-					<button class="slide-btn" type="button">
-						<!-- Слайд N1 -->
-					</button>
-				</li>
-				<li class="slide-rad">
-					<button class="slide-btn" type="button">
-						<!-- Слайд N2 -->
-					</button>
-				</li>
-				<li class="slide-red">
-					<button class="slide-btn" type="button">
-						<!-- Слайд N3 -->
-					</button>
-				</li>
-			</ul>
 		</section>
 		<section class="banners">
 			<h2 class="visually-hidden">Акции на развесное мороженое! Подарки!</h2>
@@ -90,24 +90,24 @@
 
 			<ul class="hits-list">
 				<li class="catalog-item">
-					<img src="img/product-1.jpg" width="267" height="267" alt="картинка мороженого">
+					<img class="catalog-image" src="img/product-1.jpg" width="267" height="267" alt="картинка мороженого">
 					<span>310 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 					<!--Добавила ссылки и заголовок 3-го уровня, забыла про них вчера -->
 					<h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
 				</li>
 				<li class="catalog-item">
-					<img src="img/product-2.jpg" width="267" height="267" alt="картинка мороженого">
+					<img class="catalog-image" src="img/product-2.jpg" width="267" height="267" alt="картинка мороженого">
 					<span>380 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 					<h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
 				</li>
 				<li class="catalog-item">
-					<img src="img/product-3.jpg" width="267" height="267" alt="картинка мороженого">
+					<img class="catalog-image" src="img/product-3.jpg" width="267" height="267" alt="картинка мороженого">
 					<span>355 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 					
 					<h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
 				</li>
 				<li class="catalog-item">
-					<img src="img/product-4.jpg" width="267" height="267"  alt="картинка мороженого">
+					<img class="catalog-image" src="img/product-4.jpg" width="267" height="267"  alt="картинка мороженого">
 					<span>415 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 					<h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
 				</li>

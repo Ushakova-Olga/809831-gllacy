@@ -44,13 +44,15 @@
 		
 		<h2 class="visually-hidden">Форма для запроса поиска по сайту</h2>
 		<div class="first-row-sort">
-		<label for="sort-order" class="search-headers">Cортировка:</label>
-		<select name="sort-order" id="sort-order" class="search-controls filter-select">
-			<option value="opt-popular">по популярности</option>
-			<option value="opt-p">сначала недорогие</option>
-			<option value="opt-p2">сначала дорогие</option>
-			<option value="opt-zhir">по жирности</option>
-		</select>
+		<div class="sort-rows">
+			<label for="sort-order" class="search-headers">Cортировка:<br></label>
+			<select name="sort-order" id="sort-order" class="search-controls filter-select">
+				<option value="opt-popular">по популярности</option>
+				<option value="opt-p">сначала недорогие</option>
+				<option value="opt-p2">сначала дорогие</option>
+				<option value="opt-zhir">по жирности</option>
+			</select>
+		</div>
 	
 		<fieldset class="range">
 			<div class="range-controls">
@@ -72,23 +74,25 @@
   	
 	<script  src="js/script.js"></script>
 		
-		
-		<p class="search-headers">Жирность:</p>
-		<div class="search-controls">
-			<input class="filter-input"  type="radio" id="rad-1" name="rad" value="rad1">
-			<label for="rad-1" >0%</label>
-			
-			<input class="filter-input"  type="radio" id="rad-2" name="rad" value="rad2">
-			<label for="rad-2" >до 10%</label>
+		<div class="fat-rows">
+			<p class="search-headers">Жирность:<br></p>
+			<div class="search-controls">
+				<input class="filter-input"  type="radio" id="rad-1" name="rad" value="rad1">
+				<label for="rad-1" >0%</label>
+				
+				<input class="filter-input"  type="radio" id="rad-2" name="rad" value="rad2">
+				<label for="rad-2" >до 10%</label>
 
-			<input class="filter-input"  type="radio" id="rad-3" name="rad" value="rad3">
-			<label for="rad-3" >до 30%</label>
+				<input class="filter-input"  type="radio" id="rad-3" name="rad" value="rad3">
+				<label for="rad-3" >до 30%</label>
 
-			<input class="filter-input"  type="radio" id="rad-4" name="rad" value="rad4" >
-			<label for="rad-4" >выше 30%</label>
-		</div>
+				<input class="filter-input"  type="radio" id="rad-4" name="rad" value="rad4" >
+				<label for="rad-4" >выше 30%</label>
+			</div>
+			</div>
 		</div>
 		<div class="second-row-sort">
+		<div class="filler-rows">
 		<p class="search-headers">Наполнители</p>
 		<div class="search-controls">
 			<input class="filter-input" type="checkbox" id="check1" name="check1" checked>
@@ -102,6 +106,7 @@
 			<input class="filter-input" type="checkbox" id="check5" name="check5" >
 			<label for="check5">джемы</label>
 		</div>
+		</div>
 		
 		<button class="filter-button search-controls" type="submit" >Применить</button>
 		</div>
@@ -110,62 +115,62 @@
 		<h2 class="visually-hidden">Каталог: мороженое на развес</h2>
 		<ul class="catalog-list">
 			<li class="catalog-item">
-				<img src="img/product-1.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-1.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>310 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 				<h3><a href="img/product-1.jpg">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
 			</li>
 			<li class="catalog-item">
-				<img src="img/product-2.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-2.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>380 <!--Здесь будет вставлена иконка рубля--> /кг</span>
 				<h3><a href="img/product-2.jpg">Сливочно-кофейное с кусочками шоколада</a></h3>
 			</li>
 			<li class="catalog-item">
-				<img src="img/product-3.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-3.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>355 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 				<h3><a href="img/product-3.jpg">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
 			</li>
 			<li class="catalog-item">
-				<img src="img/product-4.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-4.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>415 <!--Здесь будет вставлена иконка рубля--> /кг</span>
 				<h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
 			</li>
 			<li class="catalog-item">
-				<img src="img/product-5.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-5.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>325 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 				<h3><a href="#">Сливочное с брусничным джемом</a></h3>
 			</li>
 			<li class="catalog-item">
-				<img src="img/product-6.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-6.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>410 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 				<h3><a href="#">Сливочно-черничное с цельными ягодами черники</a></h3>
 			</li>
 			<li class="catalog-item">
-				<img src="img/product-7.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-7.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>375 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 				<h3><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
 			</li>
 			<li class="catalog-item">
-				<img src="img/product-8.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-8.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>320 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 				<h3><a href="#">Сливочное с шоколадной стружкой</a></h3>
 			</li>
 			<li class="catalog-item">
-				<img src="img/product-9.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-9.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>440 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 				<h3><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
 			</li>
 			<li class="catalog-item">
-				<img src="img/product-10.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-10.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>435 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 				<h3><a href="#">Сливочное с ментоловым сиропом</a></h3>
 			</li>
 			<li class="catalog-item">
-				<img src="img/product-11.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-11.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>355 /кг</span>
 				<h3><a href="#">Сливочное с кусочками черного шоколада</a></h3>
 			</li>
 			<li class="catalog-item">
-				<img src="img/product-12.jpg" width="267" height="267" alt="картинка мороженого">
+				<img class="catalog-image" src="img/product-12.jpg" width="267" height="267" alt="картинка мороженого">
 				<span>420 <!--Здесь будет вставлена иконка рубля-->/кг</span>
 				<h3><a href="#">Сливочное с мятным сиропом</a></h3>
 			</li>

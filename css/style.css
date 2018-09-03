@@ -501,10 +501,10 @@ label + .search-controls:hover {
 }
 /* Сеточные стили.    */
 .glassy-header {
-	margin-bottom: 284px;
 	
-	min-height: 113px;
-	margin-bottom: 286; /* отступ от шапки до текста в слайдере  */
+	
+	min-height: 103px;
+	margin-bottom: 284px; /* отступ от шапки до текста в слайдере  */
 }
 
 .glassy-header p {
@@ -531,7 +531,7 @@ label + .search-controls:hover {
 	width: 154px;
 	height: 64px;
 	
-	/*display: block;*/
+	
 }
 
 
@@ -570,16 +570,40 @@ label + .search-controls:hover {
 	
 	min-height: 209px;
 	
-	display; flex;
+	/*display: flex;
+	flex-direction: column;
 	
 	justify-content: space-between;
-	
+	align-items: center;*/
 }
 
 .slide {
-	
 	min-height: 209px;
-	width: 666px;
+	
+	width: 1070px; /*700px;*/
+	text-align: center;
+	
+}
+
+.slide h3 {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 40px;
+}
+
+
+
+.slider-columns {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.switch {
+	width: 130px;
+	min-height: 20px;
+	display: flex;
+	align-items: flex-end;
+	order: -1;
 }
 
 .banners {
@@ -634,6 +658,13 @@ label + .search-controls:hover {
 	min-height: 324px;
 	width: 270px;
 	
+	
+}
+
+.catalog-image {
+	
+	border: 0px solid rgba(0, 0, 0, 0);
+	border-radius: 50%;
 }
 
 .features {
