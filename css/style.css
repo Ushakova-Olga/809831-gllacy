@@ -1,12 +1,12 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #ffffff;
-   
- 
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #ffffff;
+	max-width: 1200px;
+	margin: 0 auto;
  }
 
 /* Пыталась вставить фоновое изображение в slide и в main, но оказалось что надо фоном вставлять в body, 
@@ -33,7 +33,6 @@ body {
 }
 
 .inner-body {
-	
 	background-color: #849d8f;
 }
 
@@ -93,6 +92,7 @@ a {
 
 .catalog-item a {
 	line-height: 22px;
+	font-size: 16px;
 	font-weight: 500;
 }
 
@@ -132,14 +132,12 @@ a {
 	line-height: 22px;
 	font-weight: 400;
 	color: #5a5a5a;
-	
 }
 
 .mailer input {
 	line-height: 24px;
 	font-weight: 400;
 	color: #999999;
-	
 }
 
 .mailer button,
@@ -179,7 +177,6 @@ a {
 	color: #323232;
 }
 
-
 .bottom-list a {
 	font-size: 13px;
 	line-height: 18px;
@@ -210,10 +207,8 @@ a {
 .catalog-list a,
 .pagination-list a,
 .bottom-list a,
-.copyright a
-{
+.copyright a {
 	color: #ffffff;
-	
 }
 
 .remember-new-login a {
@@ -222,8 +217,7 @@ a {
 }
 
 .site-navigation a,
-.catalog-list a,
-.hits-list a,
+.catalog-item-link,
 .bottom-list a,
 .copyright a,
 .crumbs a {
@@ -231,12 +225,8 @@ a {
 	border-bottom: 1px solid #b0c0b7;
 }
 
-.hits-list a:hover,
-.hits-list a:focus,
 .crumbs a:hover,
 .crumbs a:focus,
-.catalog-list a:hover,
-.catalog-list a:focus,
 .pagination-list a:hover,
 .pagination-list a:focus,
 .bottom-list a:hover,
@@ -283,15 +273,16 @@ a {
   background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
  }
-
-.button:hover {
-  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
-}
-
+ 
+.button:hover,
 .button:focus {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2)), linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%); 
+   
+	box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+    color: #ffffff;
+ }
+
+.button:active {
   background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
@@ -343,8 +334,11 @@ a {
 }
 
 .catalog-header {
+	margin: 0;
+	padding: 0;
 	font-size: 35px;
 	line-height: 41px;
+	
 }
 
 .search-headers {
@@ -371,7 +365,6 @@ label + .search-controls:hover {
 	color: #000000; 
 }
 
-
 .filter-input:disabled  + label {
 	color: #ffffff;
 	opacity: 0.5;
@@ -396,36 +389,67 @@ label + .search-controls:hover {
 	color: #323232; 
 }
 
-.modal {
-	 border-radius: 5px;
+.modal 
+{
+	border-radius: 5px;
 	background-color: rgb(248, 247, 244); 
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 	color: #323232; 
-	
 }
 
-.modal a {
+.modal a 
+{
 	color: #323232; 
 }
-
-.catalog-item:focus,
-.catalog-item:hover
-  {
-	border-radius: 5px;
-	background-color: rgba(248, 247, 244, 0.2); 
-	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.05);
-	/* Заменила значение для тени, фотошоп выжает 0.4 непрозрачность, но при просмотре с такими параметрами тень выглядит слишком черной */
-  }
   
-  /*  ----------------------------- */
-  
- /* body {*/
-  /*height: 100vh;
-  margin: 0;
-  font-weight: 400;
-  font-family: PT Sans, Arial, sans-serif;*/
-/*}*/
+.catalog-item {
+	position: relative;
+	padding-bottom: 20px;
+	/*margin-bottom: 40px;*/
+}
 
+ .catalog-item::after{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    content: "";
+    display: none;
+    height: 405px;
+	position: absolute;
+	left: -13px;
+	top: -8px;
+	
+    width: 292px;
+    opacity: 0.5;
+    z-index: 2;
+}
+.catalog-item:hover::after {
+    display: block;
+}
+
+.price-catalog-item {
+	position: absolute;
+	bottom: 85px;
+}
+.catalog-item h3 {
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+}
+
+.catalog-item-button {
+	bottom: -70px;
+	left: 27px;
+	min-width: 183px;
+    box-sizing: border-box;
+    
+    visibility: hidden;
+    z-index: 3;
+}
+.catalog-item:hover .catalog-item-button {
+    visibility: visible;
+}
+   
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -499,18 +523,15 @@ label + .search-controls:hover {
 .range-lever-max {
   left: calc(100% * 500 / 700 - 20px / 2);
 }
-/* Сеточные стили.    */
+/* Правка стилей на этапе построения сетки. Чуть позже объединю с верхними    */
 .glassy-header {
-	
-	
 	min-height: 103px;
 	margin-bottom: 284px; /* отступ от шапки до текста в слайдере  */
 }
 
 .glassy-header p {
 	text-align: right;
-	margin-right: 40px;
-	 
+	margin-right: 27px;
 }
 
 .glassy-navigation {
@@ -523,78 +544,49 @@ label + .search-controls:hover {
 	margin-top: 10px;	
 	display: flex;
 	justify-content: space-between;
-
 }
 
 .glassy-logo {
-	
 	width: 154px;
 	height: 64px;
-	
-	
 }
-
 
 .site-navigation {
 	width: 349px;
-  
-  
 	list-style: none;
-  
-	/* Временно для сетки */
 	min-height: 16px; /*47px;*/
 	display: flex;
 	justify-content: space-between;
-  
 }
 
 .user-navigation {
 	width: 244px;
- 
-	margin: 0;
+ 	margin: 0;
 	padding: 0;
-  
-	list-style: none;
-  
-	/* Временно для сетки */
+ 	list-style: none;
 	min-height: 33px; /*57px;*/
 	display: flex;
 	justify-content: space-between;
 }
 
-
-
 .slider {
 	margin: 0;
 	padding: 0;
-	
 	min-height: 209px;
-	
-	/*display: flex;
-	flex-direction: column;
-	
-	justify-content: space-between;
-	align-items: center;*/
 }
 
 .slide {
 	min-height: 209px;
-	
-	/*width: 1070px; /*700px;*/
 	flex-grow: 1;
-	
 	text-align: center;
-	
+	padding-right: 80px;
 }
 
 .slide h3 {
 	margin: 0;
 	padding: 0;
 	padding-bottom: 40px;
-	
 }
-
-
 
 .slider-columns {
 	display: flex;
@@ -642,36 +634,63 @@ label + .search-controls:hover {
 	border-radius: 18px;
 }
 
+.banner-button {
+	float: right;
+	margin-right: 23px;
+}
+
+.banner-1 h3,
+.banner-2 h3 {
+	padding-top: 25px;
+	margin-left:  20px;
+}
+
+.banner-1 p,
+.banner-2 p {
+	margin-left:  20px;
+}
+
+.button {
+	position: relative;
+	display: inline-block;
+	padding: 10px 30px;
+	text-decoration: none;
+	border: 0px solid rgba(0, 0, 0, 0);
+	border-radius: 30px;
+}
+
 .hits {
 	margin: 0;
 	padding: 0;
 	min-height: 324px;
 	width: 1146px;
-	
-	
 }
 
 .hits-list{
 	margin: 0;
 	padding: 0;
-	min-height: 324px;
+	min-height: 324px; /*408px; /*324px;*/
 	width: 1146px;
 	display: flex;
 	justify-content: space-between;
-	
 	margin-left: 27px;
+	margin-right:27px;
 }
 
 .catalog-item{
-	min-height: 324px;
-	width: 270px;
-	
-	
+	min-height: 335px; /*364px; 408px; /*324px;*/
+	width: 266px; /*290px; /*/
+	margin: 0;
+	/*margin-right: 27px;
+	margin-bottom: 42px;*/
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .catalog-image {
-	
-	border: 0px solid rgba(0, 0, 0, 0);
+	position: relative;
 	border-radius: 50%;
 }
 
@@ -688,6 +707,7 @@ label + .search-controls:hover {
 
 .features h2 {
 	margin-left: 27px;
+	padding-top: 31px;
 	
 }
 
@@ -721,12 +741,27 @@ label + .search-controls:hover {
 	
 }
 
-.news {margin: 0;
+.news {
+	margin: 0;
 	padding: 0;
 	width: 563px;
 	min-height: 221px;
 	border: 0px solid rgba(0, 0, 0, 0);
 	border-radius: 18px;
+}
+
+.news h2 {
+	
+	padding-top: 29px;
+	margin-left:  23px;
+	font-size: 16px;
+}
+
+.news a {
+	display: block;
+	padding-left:  23px;
+	padding-right: 263px;
+	text-align: left;
 }
 
 .mailer {margin: 0;
@@ -737,8 +772,22 @@ label + .search-controls:hover {
 	border-radius: 18px;
 }
 
-.map {
+.mailer p {
+	padding-top: 29px;
+	padding-left:  29px;
+	padding-right: 29px;
 	
+}
+.mailer form {
+	
+	padding-left:  29px;
+}
+
+.mailer input {
+	width: 369px;
+	
+}
+.map {
 	width: 1200px;
 	min-height: 430px;
 	background-image: url("../img/map.jpg"); 
@@ -747,7 +796,6 @@ label + .search-controls:hover {
 }
 
 .contacts-map {
-	
 	width: 308px;
 	min-height: 306px;
 	margin-top: 63px;
@@ -761,12 +809,10 @@ label + .search-controls:hover {
 .contacts-map p,
 .contacts-map a
  {
-	
 	margin-left: 26px;
 }
 
 .glassy-footer{
-	
 	display: flex;
 	justify-content: space-between;
 } 
@@ -784,29 +830,49 @@ label + .search-controls:hover {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	
-	
 }
 
 .copyright {
 	width: 189px;
 	min-height: 59px;
-	
 }
 
 .time-crumbs {
+	padding: 0;
+	margin-top: -13px;
 	min-height: 39px;
 	width: 1200px;
 	display: flex;
 	justify-content: space-between;
-	
 }
 
 .time-crumbs {
 	order: 2;
 }
 
+.time-crumbs p {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	margin-right: 25px;
+	align-self: flex-start;
+}
+
+.time {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.phone {
+	font-size: 22px;
+	line-height: 24px;
+}
 .crumbs {
+	align-self: flex-end;
+	padding: 0;
+	margin: 0;
+	margin-left: 25px;
+	margin-top: 30px;
 	order: -1;
 	display: flex;
 	justify-content: space-between;
@@ -821,37 +887,31 @@ label + .search-controls:hover {
 .catalog-items {
 	margin: 0;
 	padding: 0;
-	min-height: 324px;
-	width: 1146px;
-	
-	
+	min-height: 324px; /*408px; /*324px;*/
+	width: 1146px; /*1180px; /*1146px;*/
 }
 
 .catalog-list{
 	margin: 0;
 	padding: 0;
-	min-height: 324px;
-	width: 1146px;
+	min-height: 324px; /*408px; /*324px;*/
+	width: 1146px; /*1180px; /*1146px;*/
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	
 	margin-left: 27px;
+	margin-right:27px;
 }
 
 .pagination {
 	display: flex;
 	justify-content: flex-end;
-	
 	min-height:28px;
-	
-	
 }
 .pagination-list {
 	display: flex;
 	justify-content: space-between;
 	width: 194px;
-	
 }
 
 .first-row-sort
@@ -859,7 +919,7 @@ label + .search-controls:hover {
 	display: flex;
 	justify-content: space-between;
 	width: 861px;
-	margin-left: 28px;
+	margin-left: 27px;
 	min-height: 60px;
 	padding-bottom: 16px;
 }
@@ -869,8 +929,7 @@ label + .search-controls:hover {
 	display: flex;
 	justify-content: space-between;
 	width: 861px;
-	margin-left: 28px;
+	margin-left: 27px;
 	min-height: 60px;
 	padding-bottom: 40px;
-	
 }
