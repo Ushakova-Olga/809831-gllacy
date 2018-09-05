@@ -11,13 +11,24 @@
   <body class="main-body">
 	<header class="glassy-header">
 		<nav class="glassy-navigation">
-			
-				<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Glassy Shop">
-				<ul class="site-navigation">
-					<li><a href="cat.html">Каталог</a></li>  <!--Здесь будет ссылка на поп-ап -->
-					<li><a href="delivery.html">Доставка и оплата</a></li>
-					<li><a href="about_us.html">О компании</a></li>
-				</ul>
+				<div class="site-navigation-logo">
+					<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Glassy Shop">
+					<ul class="site-navigation">
+						<li class="catalog-link"><a href="cat.html">Каталог</a>
+							<ul class="main-menu" >
+								<li class="catalog-news"><a  href="#">Новинки</a></li>
+								<li class="main-menu-menu1"><a href="#">Сливочное</a></li>
+								<li class="main-menu-menu2"><a href="#">Щербеты</a></li>
+								<li class="main-menu-menu3"><a href="#">Фруктовый лед</a></li>
+								<li class="main-menu-menu4"><a href="#">Мелорин</a></li>
+							</ul>
+						
+						
+						</li>  <!--Здесь будет ссылка на поп-ап -->
+						<li><a href="delivery.html">Доставка и оплата</a></li>
+						<li><a href="about_us.html">О компании</a></li>
+					</ul>
+				</div>
 				<ul class="user-navigation">
 					<li><a href="search.html">Поиск</a></li> 
 					<li><a class="login-link" href="login.html">Вход</a></li>
@@ -196,7 +207,7 @@
 		</div>
 	</footer>
 	
-	<section class="modal main-menu">
+	<!--section class="main-menu">
 		<h2 class="visually-hidden">Главное меню</h2>
 		<div class="header-popup">
 			<p>Каталог</p>
@@ -209,7 +220,7 @@
 			<li><a href="#">Мелорин</a></li>
 		</ul>
 		<button class="visually-hidden">Закрыть</button>
-	</section>
+	</section-->
 	
 	<section class="modal modal-login">
 		<h2 class="visually-hidden">Вход в личный кабинет</h2>

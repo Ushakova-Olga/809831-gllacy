@@ -542,7 +542,10 @@ label + .search-controls:hover {
 	padding: 0;
 	margin-left: 27px;
 	margin-top: 10px;	
+	/*display: flex;
+	justify-content: space-between;*/
 	display: flex;
+	flex-grow: 1;
 	justify-content: space-between;
 }
 
@@ -557,6 +560,57 @@ label + .search-controls:hover {
 	min-height: 16px; /*47px;*/
 	display: flex;
 	justify-content: space-between;
+	margin-left: -20px;
+	margin-top: 7px;
+	
+}
+
+.site-navigation-logo {
+	width: 527px;
+	display: flex;
+	justify-content: space-between;
+	
+	align-items: center;
+	
+}
+
+.main-menu {
+	display: none;
+	position: absolute;
+	min-height:172px;
+	width: 143px;
+	background: #ffffff;
+	border-radius: 5px;
+}
+
+.catalog-link:hover  ul{
+	display: flex; /*block;*/
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.main-menu a {
+	color: #323232;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight:400;
+	
+	border-bottom: none;
+}
+
+.catalog-news  a {
+	color: #323232;
+	font-weight:700;
+	
+}
+.main-menu-menu1:hover a {
+	
+  background: rgb(251, 222, 215);
+  
+}
+
+.main-menu li {
+	align-items: left;
 }
 
 .user-navigation {
