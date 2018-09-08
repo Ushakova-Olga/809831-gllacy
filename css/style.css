@@ -1,39 +1,29 @@
-body {
+html, body {
 	margin: 0;
 	padding: 0;
-	font-family: "Roboto", sans-serif;
+	/*font-family: "Roboto", sans-serif;*/
+	font-family: Roboto, "Arial", sans-serif;
 	font-size: 16px;
 	font-weight: 700;
 	color: #ffffff;
-	max-width: 1200px;
-	margin: 0 auto;
+	/*max-width: 1200px;
+	margin: 0 auto;*/
+	
+/*	min-height: 100vh; 
+  margin: 0;*/
+
  }
-
-/* Пыталась вставить фоновое изображение в slide и в main, но оказалось что надо фоном вставлять в body, 
-т.к. некоторые надписи из шапки наползают на картинку, в частности время работы и телефон. 
-Переносить эти надписи из шапки в слайды нелогично.
-Как-то надо будет при переключении слайдера менять свойства main-body, 
-только как это сделать не понимаю пока. */
-
+ 
 .main-body {
 	/* Фон 1 */
-	background-image: url("../img/slide1-background.png"); 
-	background-color: #849d8f;
-	
-	/* Фон 2 */
-	/*background-image: url("../img/slide2-background.png"); 
-	background-color: #8996a6;*/
-	
-	/* Фон 3 */
-	/*background-image: url("../img/slide2-background.png"); 
-	background-color: #9d8b84;*/
-	
-	background-position: top center;
-	background-repeat: no-repeat;
+	/*background-image: url("../img/slide1-background.png"); 
+	background-color: #849d8f;*/
 }
 
 .inner-body {
 	background-color: #849d8f;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 a {
@@ -68,6 +58,9 @@ a {
 .slide h3 {
 	font-size: 60px;
 	line-height: 60.35px;
+	width: 700px;
+	margin: 0 auto;
+	margin-bottom: 27px;
 }
 
 .banners-list h3 {
@@ -292,6 +285,9 @@ a {
  .quick_order {
 	font-size: 32px;
 	line-height: 44px;
+	width: 284px;
+	box-sizing:border-box;
+	margin-bottom: 34px;
 }
 
 .features {
@@ -301,7 +297,6 @@ a {
 	background-repeat: repeat;
 	color: #323232;
 }
-
 
 .feature-item {
 	text-align: left;	
@@ -313,9 +308,9 @@ a {
 }
 
 .map {
-	background-image: url("../img/map.jpg"); 
-	background-position: center center;
-	background-repeat: no-repeat;
+	/*background-image: url("../img/map.jpg"); */
+	/*background-position: center center;
+	background-repeat: no-repeat;*/
 }
 
 .contacts-map {
@@ -338,7 +333,6 @@ a {
 	padding: 0;
 	font-size: 35px;
 	line-height: 41px;
-	
 }
 
 .search-headers {
@@ -442,7 +436,6 @@ label + .search-controls:hover {
 	left: 27px;
 	min-width: 183px;
     box-sizing: border-box;
-    
     visibility: hidden;
     z-index: 3;
 }
@@ -525,25 +518,25 @@ label + .search-controls:hover {
 }
 /* Правка стилей на этапе построения сетки. Чуть позже объединю с верхними    */
 .glassy-header {
-	min-height: 103px;
-	margin-bottom: 284px; /* отступ от шапки до текста в слайдере  */
+	min-height: 104px; /*103px;*/
+	margin-bottom: 277px; /* отступ от шапки до текста в слайдере  
+	background-color: rgba(0, 0, 0, 0.4);*/
 }
 
 .glassy-header p {
+	padding:0;
+	margin:0;
 	text-align: right;
 	margin-right: 27px;
 }
 
 .glassy-navigation {
-	width: 1150px;
-	min-height: 33px; /*74px; Вот с этими высотами запуталась. В итоге взяла просто высоту шрифта, а отступ попытаюсь задать по-другому*/
+	width: 1146px;
+	min-height: 33px; /*33px; */
 	background-color: transparent;
 	margin: 0;
 	padding: 0;
-	margin-left: 27px;
-	margin-top: 10px;	
-	/*display: flex;
-	justify-content: space-between;*/
+	padding-top: 0px;/*10px;*/
 	display: flex;
 	flex-grow: 1;
 	justify-content: space-between;
@@ -557,7 +550,7 @@ label + .search-controls:hover {
 .site-navigation {
 	width: 349px;
 	list-style: none;
-	min-height: 16px; /*47px;*/
+	min-height: 16px; 
 	display: flex;
 	justify-content: space-between;
 	margin-left: -20px;
@@ -569,9 +562,7 @@ label + .search-controls:hover {
 	width: 527px;
 	display: flex;
 	justify-content: space-between;
-	
 	align-items: center;
-	
 }
 
 .main-menu {
@@ -583,7 +574,13 @@ label + .search-controls:hover {
 	border-radius: 5px;
 }
 
-.catalog-link:hover  ul{
+.catalog-link:hover  ul   {
+	display: flex; /*block;*/
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.catalog-link a:active   {
 	display: flex; /*block;*/
 	flex-direction: column;
 	justify-content: space-around;
@@ -594,19 +591,15 @@ label + .search-controls:hover {
 	font-size: 14px;
 	line-height: 16px;
 	font-weight:400;
-	
 	border-bottom: none;
 }
 
 .catalog-news  a {
 	color: #323232;
 	font-weight:700;
-	
 }
 .main-menu-menu1:hover a {
-	
   background: rgb(251, 222, 215);
-  
 }
 
 .main-menu li {
@@ -614,46 +607,39 @@ label + .search-controls:hover {
 }
 
 .user-navigation {
-	width: 244px;
+	width: 246px;
  	margin: 0;
 	padding: 0;
+	padding-top: 0px;
  	list-style: none;
-	min-height: 33px; /*57px;*/
+	min-height: 39px; /*57px;*/
 	display: flex;
 	justify-content: space-between;
 }
 
 .slider {
-	margin: 0;
+/*	margin: 0;
 	padding: 0;
-	min-height: 209px;
+	min-height: 209px;*/
+	position: relative;
+	text-align: center;
+	color: #ffffff;
 }
 
 .slide {
 	min-height: 209px;
-	flex-grow: 1;
 	text-align: center;
-	padding-right: 80px;
 }
 
 .slide h3 {
-	margin: 0;
+	/*margin: 0;
 	padding: 0;
-	padding-bottom: 40px;
-}
-
-.slider-columns {
-	display: flex;
-	justify-content: flex-start;
-}
-
-.switch {
-	padding-left: 27px;
-	width: 80px; /*130px;*/
-	min-height: 20px;
-	display: flex;
-	align-items: flex-end;
-	order: -1;
+	padding-bottom: 40px;*/
+	width: 700px;
+	margin: 0 auto;
+	margin-bottom: 33px;
+	font-size: 60px;
+	line-height: 60px;
 }
 
 .banners {
@@ -671,7 +657,7 @@ label + .search-controls:hover {
 	display: flex;
 	width: 1146px;
 	justify-content: space-between;	
-	margin-left: 27px;
+	margin-left: 0;/*27px;*/
 }
 
 .banner-1 {
@@ -695,13 +681,19 @@ label + .search-controls:hover {
 
 .banner-1 h3,
 .banner-2 h3 {
-	padding-top: 25px;
+	margin:0;
+	padding:0;
+	padding-top: 21px;
 	margin-left:  20px;
+	padding-bottom: 20px;
 }
 
 .banner-1 p,
 .banner-2 p {
+	margin:0;
+	padding:0;
 	margin-left:  20px;
+	padding-bottom: 35px;
 }
 
 .button {
@@ -727,12 +719,12 @@ label + .search-controls:hover {
 	width: 1146px;
 	display: flex;
 	justify-content: space-between;
-	margin-left: 27px;
-	margin-right:27px;
+	/*margin-left: 27px;
+	margin-right:27px;*/
 }
 
 .catalog-item{
-	min-height: 335px; /*364px; 408px; /*324px;*/
+	min-height: 324px; /*364px; 408px; /*324px;*/
 	width: 266px; /*290px; /*/
 	margin: 0;
 	/*margin-right: 27px;
@@ -750,36 +742,35 @@ label + .search-controls:hover {
 
 .features {
 	width: 1146px;
-	min-height: 307px;
+	min-height: 305px;
 	margin: 0;
-	margin-left: 27px;
+	padding: 0;
+	/*margin-left: 27px;*/
 	margin-bottom: 40px;
-	border: 0px solid rgba(0, 0, 0, 0);
+	/*border: 0px solid rgba(0, 0, 0, 0);*/
 	border-radius: 18px;
 	
 }
 
 .features h2 {
+	margin:0;
+	padding: 0;
 	margin-left: 27px;
-	padding-top: 31px;
+	padding-top: 21px;
 	
 }
 
 .features-list {
 	width: 1146px;
-	height: 212px; /* Задала фиксированную высоту, т.к. иначе не переносятся элементы списка во вторую колонку. 
-Считается ли это ошибкой? Если да, тогда надо делать два списка в 2 разных контейнера-колонки?	*/
-	
+	min-height: 168px;/*212px;*/ 
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-wrap: wrap;
 }
 
 .feature-item {
-	
-	width: 535px;
-	min-height: 100px;
+	width: 475px;
+	min-height: 63px; /*100px;*/
 }
 
 .news-container {
@@ -787,7 +778,7 @@ label + .search-controls:hover {
 	margin: 0;
 	padding: 0;
 	margin-left: 27px;
-	margin-bottom: 40px;
+	margin-bottom: 80px;
 	
 	min-height: 221px;
 	display: flex;
@@ -842,11 +833,12 @@ label + .search-controls:hover {
 	
 }
 .map {
-	width: 1200px;
-	min-height: 430px;
-	background-image: url("../img/map.jpg"); 
+	width: 100%; /*1200px;*/
+	/*min-height: 430px;*/
+	/*background-image: url("../img/map.jpg"); */
 	display: flex;
 	justify-content: flex-end;
+	/*position: relative;*/
 }
 
 .contacts-map {
@@ -854,16 +846,24 @@ label + .search-controls:hover {
 	min-height: 306px;
 	margin-top: 63px;
 	margin-right: 26px;
-	margin-bottom: 62px;
+	margin-bottom: 102px;
 	padding-bottom: 19px;
 	border: 0px solid rgba(0, 0, 0, 0);
 	border-radius: 18px;
+	z-index: 1;
 }
 
 .contacts-map p,
 .contacts-map a
  {
 	margin-left: 26px;
+}
+.map img {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: auto;
+	z-index: 0;
 }
 
 .glassy-footer{
@@ -908,18 +908,24 @@ label + .search-controls:hover {
 	margin: 0;
 	padding: 0;
 	text-align: right;
-	margin-right: 25px;
+	/*margin-right: 25px;*/
 	align-self: flex-start;
 }
 
 .time {
 	font-size: 14px;
 	line-height: 16px;
+	
 }
 
 .phone {
+	margin:0;
+	padding:0;
 	font-size: 22px;
 	line-height: 24px;
+	width: 1146px;
+	margin-top: 4px;
+	display: block-inline;
 }
 .crumbs {
 	align-self: flex-end;
@@ -986,4 +992,343 @@ label + .search-controls:hover {
 	margin-left: 27px;
 	min-height: 60px;
 	padding-bottom: 40px;
+}
+
+
+/*  Слайдер */
+.site-wrapper {
+  min-width: 900px; /*40px;*/
+  background-color: #849d8f;
+  background-image: url("../img/slide1-background.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.site-wrapper::before {
+  background-image: background-image: url("../img/slide1-background.png"); 
+  }
+
+.site-wrapper::after {
+  background-image: background-image: url("../img/slide1-background.png"); 
+}
+
+/*.container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}*/
+
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 0; /*27px;*/
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.slide {
+  display: none;
+}
+
+/*
+.button {
+  display: inline-block;
+  padding: 12px 44px;
+
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: top;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button:active {
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}*/
+
+.slider-controls {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  z-index: 20;
+  
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+	cursor: pointer;
+}
+
+#product-1:checked ~ .site-wrapper {
+	background-color: #849d8f;
+	background-image: url("../img/slide1-background.png"); 
+}
+
+#product-2:checked ~ .site-wrapper {
+	background-color: #8996a6;
+	background-image: url("../img/slide2-background.png"); 
+}
+
+#product-3:checked ~ .site-wrapper {
+	background-color: #9d8b84;
+	background-image: url("../img/slide3-background.png"); 
+}
+
+#product-1:checked ~ .site-wrapper #slide1,
+#product-2:checked ~ .site-wrapper #slide2,
+#product-3:checked ~ .site-wrapper #slide3 {
+	display: block;
+}
+
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"] {
+	background-color: #ffffff;
+}
+.glassy-navigation {
+	/*background: rgba(255, 45, 82, 0.5);
+	box-shadow: 0 0 0 3px rgb(255, 45, 82);*/
+}
+.user-navigation {
+	/*background: rgba(234, 255, 45, 0.2);
+	box-shadow: inset 0 0 0 2px rgb(234, 255, 45);*/
+	margin-top: 23px;
+
+}
+.site-navigation {
+	/*background: rgba(255, 45, 82, 0.2);
+	box-shadow: 0 0 0 3px rgb(255, 45, 82);*/
+}
+
+.site-navigation-logo {
+	/*background: rgba(20, 255, 82, 0.2);
+	box-shadow: 0 0 0 3px rgb(20, 255, 82);*/
+	padding-top: 10px;
+}
+
+.glassy-header {
+	/*background: rgba(50, 50, 250, 0.2);
+	box-shadow: 0 0 0 3px rgb(50, 50, 250);*/
+}
+
+.login-link path{
+	
+  fill: #ffffff;
+}
+
+.search-link {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	width: 33px;
+	height: 33px;
+	border-radius: 20px;
+	background-color: rgba(255,255,255,0.4);
+	position: relative;
+}
+
+.login-link {
+	display: inline-block;
+	height: 33px;
+	width: 91px;
+	border-radius: 20px;
+	background-color: rgba(255,255,255,0.4);
+	position: relative;
+}
+
+.cart-link {
+	display: inline-block;
+	height: 33px;
+	width:100px;
+	border-radius: 20px;
+	background-color: rgba(255,255,255,0.4);
+	position: relative;
+}
+
+.search-link svg{
+	position: absolute;
+	top: 8px;
+	left: 8px;
+}
+
+.login-link svg{
+	position: absolute;
+	top: 7px;
+	left: 10px;
+}
+
+.login-link span {
+	position: absolute;
+	top: 8px;
+	left: 35px;
+	
+}
+
+.cart-link svg {
+	position: absolute;
+	/*content: '';*/
+	top: 7px;
+	left: 10px;
+	
+}
+
+.cart-link span {
+	position: absolute;
+	/*content: '';*/
+	top: 8px;
+	left: 35px;
+	
+}
+	
+.search-link:hover path{
+	fill: #000000;
+}
+
+.login-link:hover path{
+	fill: #000000;
+}
+
+.cart-link:hover path,
+.cart-link:hover circle
+ {
+	fill: #000000;
+	
+}
+
+.time {
+	padding: 0;
+	margin: 0;
+	/*background: rgba(50, 50, 50, 0.2);
+  box-shadow: 0 0 0 3px rgb(50, 50, 50);*/
+  width: 1146px;
+}
+
+
+.social-list a {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+
+.social-list svg {
+	opacity: 0.8;
+	border: 2px solid rgba(255,255,255,0.5);
+	border-radius: 50%;
+}
+
+.social-list svg:hover,
+.social-list svg:focus
+ {
+	opacity: 1;
+	border: 2px solid rgba(255,255,255,0.7);
+	border-radius: 50%;
+}
+.ice-cream{
+	position: relative;
+}
+
+.ice-cream::before {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -60px;
+	width: 49px;
+	height: 49px;
+	background-image: url("../img/ice-cream.svg"); 
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.cow{
+	position: relative;
+}
+
+.cow::before {
+	content: "";
+  	position: absolute;
+	top: -5px;
+	left: -60px;
+  	width: 49px;
+	height: 49px;
+  	background-image: url("../img/cow.svg"); 
+	background-repeat: no-repeat;
+	background-position: 0 0;
+ }
+ 
+.eco{
+	position: relative;
+}
+
+.eco::before {
+	content: "";
+ 	position: absolute;
+	top: -5px;
+	left: -60px;
+	width: 49px;
+	height: 49px;
+ 	background-image: url("../img/eco.svg"); 
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.thermometer{
+	position: relative;
+}
+
+.thermometer::before {
+	content: "";
+  
+  position: absolute;
+  top: -5px;
+  left: -60px;
+  
+  width: 49px;
+  height: 49px;
+  
+  background-image: url("../img/thermometer.svg"); 
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  
+
 }

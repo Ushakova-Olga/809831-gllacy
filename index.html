@@ -9,44 +9,71 @@
 	
   </head>
   <body class="main-body">
+  
+  
+  
+    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+    <div class="site-wrapper">
+      <div class="container">
+        
+		
+
+		
 	<header class="glassy-header">
 		<nav class="glassy-navigation">
 				<div class="site-navigation-logo">
 					<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Glassy Shop">
 					<ul class="site-navigation">
-						<li class="catalog-link"><a href="cat.html">Каталог</a>
+						<li class="catalog-link"><a  href="catalog.html">Каталог</a>
+							<h2 class="visually-hidden">Главное меню</h2>
 							<ul class="main-menu" >
 								<li class="catalog-news"><a  href="#">Новинки</a></li>
-								<li class="main-menu-menu1"><a href="#">Сливочное</a></li>
-								<li class="main-menu-menu2"><a href="#">Щербеты</a></li>
-								<li class="main-menu-menu3"><a href="#">Фруктовый лед</a></li>
-								<li class="main-menu-menu4"><a href="#">Мелорин</a></li>
+								<li class="main-menu-menu1"><a href="catalog.html">Сливочное</a></li>
+								<li class="main-menu-menu1"><a href="#">Щербеты</a></li>
+								<li class="main-menu-menu1"><a href="#">Фруктовый лед</a></li>
+								<li class="main-menu-menu1"><a href="#">Мелорин</a></li>
 							</ul>
-						
-						
-						</li>  <!--Здесь будет ссылка на поп-ап -->
+							<button class="visually-hidden">Закрыть</button>
+						</li>  
 						<li><a href="delivery.html">Доставка и оплата</a></li>
 						<li><a href="about_us.html">О компании</a></li>
 					</ul>
 				</div>
 				<ul class="user-navigation">
-					<li><a href="search.html">Поиск</a></li> 
-					<li><a class="login-link" href="login.html">Вход</a></li>
-					<li><a href="cart.html">Корзина</a></li> 
+					<li>
+						<a class="search-link" href="search.html">
+							<span class="visually-hidden">Поиск</span>
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
+						</a>
+					</li> 
+					<li>
+						<a class="login-link" href="login.html">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#000"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
+							<span>Вход</span>
+						</a>
+					</li>
+					<li>
+						<a class="cart-link" href="cart.html">
+							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
+							<span>Корзина</span>
+						</a>
+					</li> 
 				</ul>
 			
 		</nav>
-		<p>C 10 до 20 ежедневно<br>8 818 450-25-25<br></p>
+		<div class="time-phone">
+		<p class="time">C 10 до 20 ежедневно</p><p class="phone">8 818 450-25-25<br></p>
+		</div>
 	</header>
 	<main class="main-page">
 		<h1 class="visually-hidden">Магазин мороженого Glassy Shop</h1>
-		<section class="slider">
-		<!--   Здесь будет слайдер, который будет переключать слайды  -->
+		<!--section class="slider">
 			<h2 class="visually-hidden">Акции на мороженое в рожках! Скидки!</h2>
 			<div class="slider-columns">
 				<div class="slide">
 					<h3>Крем-брюле и пломбир<br>с малиновым джемом</h3>
-					<!--Изображение планирую вставить как background-image при стилизации -->
 					<button class="quick_order button">Давайте оба!</button>
 				</div>
 				<div class="slide visually-hidden">
@@ -58,25 +85,58 @@
 					<button class="quick_order  button">Давайте оба!</button>
 				</div>
 				<ul class="switch">
-				<!--Переделала как рекомедовали в лекции - сделать содержимое списка кнопками -->
 					<li class="slide-rad">
 						<button class="slide-btn" type="button">
-							<!-- Слайд N1 -->
 						</button>
 					</li>
 					<li class="slide-rad">
 						<button class="slide-btn" type="button">
-							<!-- Слайд N2 -->
 						</button>
 					</li>
 					<li class="slide-red">
 						<button class="slide-btn" type="button">
-							<!-- Слайд N3 -->
 						</button>
 					</li>
 				</ul>
 			</div>
-		</section>
+		</section-->
+		
+		
+		
+		<section class="slider">
+          <div class="slider-controls">
+            <label for="product-1">Первый</label>
+            <label for="product-2">Второй</label>
+            <label for="product-3">Третий</label>
+          </div>
+		  <h2 class="visually-hidden">Акции на мороженое в рожках! Скидки!</h2>
+          <ul class="slider-list">
+            <li class="slider-item slide" id="slide1">
+              <h3> <!-- class="slide-title"-->
+                Крем-брюле и пломбир с малиновым джемом
+              </h3>
+              <!--a class="button slide-button" href="#">Давайте оба!</a-->
+			  <a class="quick_order button" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider-item slide" id="slide2">
+              <h3> <!--h3 class="slide-title"-->
+                Шоколадный пломбир и лимонный сорбет
+              </h3>
+              <!--a class="button slide-button" href="#">Давайте оба!</a-->
+			  <a class="quick_order button" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider-item slide" id="slide3">
+              <h3> <!--h3 class="slide-title"-->
+                Пломбир с помадкой и клубничный щербет
+              </h3>
+              <!--a class="button slide-button" href="#">Давайте оба!</a-->
+			  <a class="quick_order button" href="#">Давайте оба!</a>
+            </li>
+          </ul>
+        </section>
+		
+		
+		
 		<section class="banners">
 			<h2 class="visually-hidden">Акции на развесное мороженое! Подарки!</h2>
 			<ul class="banners-list">
@@ -140,19 +200,20 @@
 			<h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
 
 			<ul class="features-list">
-				<li class="feature-item">
+				<li class="feature-item ice-cream">
 					<!--Здесь будет иконка-->
 					<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
 				</li>
-				<li class="feature-item">
-					<!--Здесь будет иконка-->
-					<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья</p>
-				</li>
-				<li class="feature-item">
+				<li class="feature-item cow">
 					<!--Здесь будет иконка-->
 					<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
 				</li>
-				<li class="feature-item">
+				<li class="feature-item eco">
+					<!--Здесь будет иконка-->
+					<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья</p>
+				</li>
+				
+				<li class="feature-item thermometer">
 					<!--Здесь будет иконка-->
 					<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
 				</li>
@@ -175,8 +236,10 @@
 		</div>
 		<section class="map">
 			<h2 class="visually-hidden">Мы на карте</h2>
+			<img src="img/map.jpg" alt="Карта" width="1200" height="430">
 			<!--Иконка с мороженым-->
 			<div class="contacts-map">
+				
 				<p class="p1">Адрес главного офиса и офлайн-магазина:<br></p>
 				<p class="p2">ул. Большая Конюшенная<br>
 				19/8, Санкт-Петерубург<br><br></p>
@@ -190,10 +253,27 @@
 	</main>
 	<footer class="glassy-footer">
 		<ul class="social-list">
-			<li><a href="#"><img src="img/twitter.svg" width="32" height="32" alt="твиттер"></a></li>
-			<li><a href="#"><img src="img/instagram.svg" width="32" height="32" alt="инстаграмм"></a></li>
-			<li><a href="#"><img src="img/fb.svg" width="32" height="32" alt="фейсбук"></a></li>
-			<li><a href="#"><img src="img/vk.svg" width="32" height="32" alt="вконтакте"></a></li>
+			<li>
+				<a href="#"><!--img src="img/twitter.svg" width="32" height="32" alt="твиттер"-->
+					<span class="visually-hidden">Твиттер></span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"/></svg>
+				</a></li>
+			<li>
+				<a href="#"><!--img src="img/instagram.svg" width="32" height="32" alt="инстаграмм"-->
+					<span class="visually-hidden">Инстаграмм</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#FFF"><path d="M20.916 16a4.938 4.938 0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.746.137 1.14z"/><path d="M15.978 18.659c1.466 0 2.659-1.193 2.659-2.659s-1.193-2.659-2.659-2.659c-1.466 0-2.659 1.193-2.659 2.659s1.192 2.659 2.659 2.659zM18.637 10.302h3.039v3.039h-3.039z"/><path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.955 21.698a2.285 2.285 0 0 1-2.279 2.279H10.279A2.285 2.285 0 0 1 8 21.698V10.302a2.286 2.286 0 0 1 2.279-2.279h11.396a2.286 2.286 0 0 1 2.279 2.279v11.396z"/></g></svg>
+				</a>
+			</li>
+			<li>
+				<a href="#"><!--img src="img/fb.svg" width="32" height="32" alt="фейсбук"-->
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"/></svg>
+				</a>
+			</li>
+			<li>
+				<a href="#"><!--img src="img/vk.svg" width="32" height="32" alt="вконтакте"-->
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#FFF"><path d="M16.637 14.495c.402-.019.719-.082.951-.188.326-.145.54-.33.641-.559.101-.229.15-.496.15-.797 0-.232-.058-.465-.174-.697-.116-.232-.322-.405-.617-.517-.264-.1-.592-.155-.984-.165a76.242 76.242 0 0 0-1.652-.014h-.339v2.965h.565c.571 0 1.057-.009 1.459-.028zM18.118 17.084c-.282-.081-.672-.125-1.166-.132a127.97 127.97 0 0 0-1.55-.009h-.79v3.493h.264c1.014 0 1.74-.003 2.18-.009a3.2 3.2 0 0 0 1.212-.245c.377-.157.633-.364.774-.625s.214-.562.214-.9c0-.446-.088-.788-.261-1.03-.17-.241-.464-.423-.877-.543z"/><path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm6.602 20.531a3.73 3.73 0 0 1-1.124 1.327c-.552.415-1.161.71-1.823.886s-1.501.264-2.519.264h-6.121V8.987h5.443c1.13 0 1.957.038 2.48.113a5.126 5.126 0 0 1 1.561.5c.533.27.929.632 1.189 1.087.26.455.392.975.392 1.558 0 .678-.179 1.278-.536 1.795-.358.518-.863.92-1.517 1.208v.075c.917.182 1.642.559 2.179 1.13.537.571.807 1.325.807 2.261 0 .678-.138 1.283-.411 1.817z"/></g></svg>
+				</a>
+			</li>
 		</ul>
 		<ul class="bottom-list">
 			<li class="for-suppliers" ><a href="#">Для поставщиков</a><li>
@@ -314,5 +394,13 @@
 			<button class="button" type="submit">Оформить заказ</button>
 		</form>
 	</section>
+	
+	
+	
+	</div>
+    </div>
+	
+	
+	
   </body>
 </html>
