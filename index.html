@@ -163,8 +163,7 @@
 				<li class="catalog-item">
 					<img class="catalog-image" src="img/product-1.jpg" width="267" height="267" alt="картинка мороженого">
 					<div class="price-catalog-item">
-						<span>310 <!--Здесь будет вставлена иконка рубля-->/кг</span>
-						<!--Добавила ссылки и заголовок 3-го уровня, забыла про них вчера -->
+						<span class="price-digit">310</span><span class="visually-hidden">руб.</span><span class="price-letters">/кг</span>
 					</div>
 					<h3><a class="catalog-item-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
 					<a class="button catalog-item-button">Быстрый просмотр</a>
@@ -173,7 +172,7 @@
 				<li class="catalog-item">
 					<img class="catalog-image" src="img/product-2.jpg" width="267" height="267" alt="картинка мороженого">
 					<div class="price-catalog-item">
-						<span>380 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+						<span class="price-digit">380</span><span class="visually-hidden">руб.</span><span class="price-letters">/кг</span>
 					</div>
 					<h3><a class="catalog-item-link" href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
 					<a class="button catalog-item-button">Быстрый просмотр</a>
@@ -181,7 +180,7 @@
 				<li class="catalog-item">
 					<img class="catalog-image" src="img/product-3.jpg" width="267" height="267" alt="картинка мороженого">
 					<div class="price-catalog-item">
-						<span>355 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+						<span class="price-digit">355</span><span class="visually-hidden">руб.</span><span class="price-letters">/кг</span>
 					</div>
 					<h3><a class="catalog-item-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
 					<a class="button catalog-item-button">Быстрый просмотр</a>
@@ -189,7 +188,7 @@
 				<li class="catalog-item">
 					<img class="catalog-image" src="img/product-4.jpg" width="267" height="267"  alt="картинка мороженого">
 					<div class="price-catalog-item">
-						<span>415 <!--Здесь будет вставлена иконка рубля-->/кг</span>
+						<span class="price-digit">415</span><span class="visually-hidden">руб.</span><span class="price-letters">/кг</span>
 					</div>
 					<h3><a class="catalog-item-link" href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
 					<a class="button catalog-item-button">Быстрый просмотр</a>
@@ -226,12 +225,14 @@
 				<!--Фон будет вставлен как background-image-->
 			</article>
 			<section class="mailer">
+				<div class="blanc">
 				<h2 class="visually-hidden">Подписка на рассылку</h2>
 				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
 				<form>
 					<input type="email" placeholder="Электронная почта">
 					<button class="button">Отправить</button>
 				</form>
+				</div>
 			</section>
 		</div>
 		<section class="map">
@@ -239,14 +240,12 @@
 			<img src="img/map.jpg" alt="Карта" width="1200" height="430">
 			<!--Иконка с мороженым-->
 			<div class="contacts-map">
-				
-				<p class="p1">Адрес главного офиса и офлайн-магазина:<br></p>
-				<p class="p2">ул. Большая Конюшенная<br>
+				<p class="map-p1">Адрес главного офиса и офлайн-магазина:<br></p>
+				<p class="map-p2">ул. Большая Конюшенная<br>
 				19/8, Санкт-Петерубург<br><br></p>
-				<p class="p1">Для заказов по телефону:<br></p>
-				<p class="p3">8 812 450-25-25<br></p>
-				<p class="p4">(с 10 до 20 ежедневно)</p>
-				
+				<p class="map-p1">Для заказов по телефону:<br></p>
+				<p class="map-p3">8 812 450-25-25<br></p>
+				<p class="map-p4">(с 10 до 20 ежедневно)</p>
 				<a class="button" href="#">Форма обратной связи</a>
 			</div>
 		</section>
