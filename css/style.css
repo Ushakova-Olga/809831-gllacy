@@ -301,6 +301,11 @@ a {
 	fill: #000000;
 }
 
+.login-link:hover {
+	color: #000000;
+	background-color: rgb(247, 246, 243);
+}
+
 .cart-link {
 	display: inline-block;
 	height: 33px;
@@ -1560,6 +1565,45 @@ label + .search-controls:hover {
 }
 
 /* Модальные окна*/
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
 .modal {
 	border-radius: 5px;
 	background-color: rgb(248, 247, 244); 
@@ -1594,9 +1638,16 @@ label + .search-controls:hover {
 }
 
 /* Окно входа*/
+.login{
+	position: relative;
+}
 .modal-login {
-	top: 60px;
-	left: 64%;
+	position: absolute;
+	
+	top: 40px;
+	right: 10px;
+	/*top: 60px;
+	left: 64%;*/
  	display: none;
 	width: 243px;
 	padding: 20px 18px;
@@ -1608,7 +1659,7 @@ label + .search-controls:hover {
 	margin: 0;
 	padding: 0;
 }
-.modal-login::before {
+/*.modal-login::before {
 	top: -38px;
 	right: 0px;
   
@@ -1621,7 +1672,7 @@ label + .search-controls:hover {
 	padding-right: 18px;
 	width: 45px;
 	background: url("../img/entrance.svg") 10% 10px no-repeat,  #ffffff;
-}
+}*/
 
 .user-email,
 .user-password {
@@ -1666,9 +1717,14 @@ label + .search-controls:hover {
 }
 
 /* Окно поиска*/
+.search{
+	position: relative;
+}
 .modal-search {
-	top: 60px;
-	left: 50%;
+	position: absolute;
+	right: 10px; /*60px;*/
+	bottom: -70px;/*50%;*/
+	/*margin-left:20px;*/
 	width: 312px;
 	display: none;
 	padding: 20px 15px;
@@ -1794,13 +1850,19 @@ label + .search-controls:hover {
 }
 
 /* Корзина   */
+.fullcart {
+	position: relative;
+}
 .modal-cart {
-	top: 60px;
-	left: 53%;
+	position: absolute;
+	
+	top: 40px;
+	right: 0px;
 	width: 508px;
 	display: none;
 	padding: 20px 16px;
 	border-radius: 5px;
+	z-index: 100;
 }
 
 .cart-del {
@@ -1896,4 +1958,25 @@ label + .search-controls:hover {
 	margin-top: 18px;
 	font-size: 18px;
 	line-height: 24px;
+}
+
+.modal-show {
+  display: block;
+ /* animation: bounce 0.6s;*/
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.search:hover .modal-search {
+	display: block;
+}
+
+.login:hover .modal-login {
+	display: block;
+}
+
+.fullcart:hover .modal-cart {
+	display: block;
 }
