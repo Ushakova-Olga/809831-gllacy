@@ -269,7 +269,7 @@ a {
 }
 
 .search-link:hover path,
-.search-link:focus path{
+.search-link:focus path {
 	fill: #000000;
 }
 
@@ -298,11 +298,13 @@ a {
 	left: 35px;
 }
 
-.login-link:hover path{
+.login-link:hover path,
+.login-link:focus path{
 	fill: #000000;
 }
 
-.login-link:hover {
+.login-link:hover,
+.login-link:focus {
 	color: #000000;
 	background-color: rgb(247, 246, 243);
 }
@@ -329,7 +331,9 @@ a {
 }
 
 .cart-link:hover path,
-.cart-link:hover circle
+.cart-link:hover circle,
+.cart-link:focus path,
+.cart-link:focus circle
  {
 	fill: #000000;
 }
@@ -1583,7 +1587,7 @@ label + .search-controls:hover {
 }
 
 /* Модальные окна*/
-/*@keyframes bounce {
+@keyframes bounce {
   0% {
     transform: translateY(-2000px);
   }
@@ -1601,7 +1605,7 @@ label + .search-controls:hover {
   }
 }
 
-/*@keyframes shake {
+@keyframes shake {
   0%,
   100% {
     transform: translateX(0);
@@ -1621,7 +1625,7 @@ label + .search-controls:hover {
   80% {
     transform: translateX(10px);
   }
-}*/
+}
 .modal {
 	border-radius: 5px;
 	background-color: rgb(248, 247, 244); 
@@ -1715,6 +1719,11 @@ label + .search-controls:hover {
 
 .remember-new-login {
 	width: 120px;
+	
+}
+
+.remember-new-login a {
+	
 	font-size: 13px;
 	line-height: 14px;
 	font-weight: 400;
@@ -1978,14 +1987,14 @@ label + .search-controls:hover {
 	line-height: 24px;
 }
 
-/*.modal-show {
+.modal-show {
   display: block;
   animation: bounce 0.6s;
 }
 
 .modal-error {
   animation: shake 0.6s;
-}*/
+}
 
 .search:hover .modal-search {
 	display: block;
@@ -1998,3 +2007,37 @@ label + .search-controls:hover {
 .fullcart:hover .modal-cart {
 	display: block;
 }
+
+.modal-overlay {
+Position: fixed;
+display: none;
+Top: 0;
+Left: 0;
+Width: 100%;
+Height: 100%;
+background:  rgba(0,0,0,0.3);
+z-index: 90; 
+}
+
+.modal-overlay-show {
+
+display: block;
+ 
+}
+
+
+/*.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}*/
