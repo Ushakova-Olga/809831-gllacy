@@ -268,7 +268,8 @@ a {
 	left: 8px;
 }
 
-.search-link:hover path{
+.search-link:hover path,
+.search-link:focus path{
 	fill: #000000;
 }
 
@@ -337,7 +338,7 @@ a {
 	background: none;
 	position: relative;
 }
-.catalog-link:hover  ul   {
+.catalog-link:hover  .main-menu   {
 	display: flex; 
 	flex-direction: column;
 	justify-content: space-around;
@@ -1367,8 +1368,17 @@ label + .search-controls:hover {
 	cursor: pointer; 
  }
  
- .range-lever:active {
+ .range-lever:active
+ {
 	cursor: pointer;
+ }
+ 
+ .range-input:focus + .range-lever
+ {
+	border-color: #663d15;
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+	border: 8px solid #ffffff;
  }
 
 .range-lever-min {
@@ -1392,10 +1402,12 @@ label + .search-controls:hover {
 	align-items: center;
 	border-radius: 45px;
  }
+  
  
- .filter-input-rad {
+.filter-input-rad {
 	position: relative;
- }
+	
+}
  
 .filter-input-rad::before {
 	content: "";
@@ -1420,6 +1432,12 @@ label + .search-controls:hover {
 	background-repeat: no-repeat;
 	background-color: #a9bbb1; 
 }
+
+/*.filter-input-rad :focus  {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}*/
 
  /* Наполнители - чекбоксы*/
 .filler-check {
@@ -1565,7 +1583,7 @@ label + .search-controls:hover {
 }
 
 /* Модальные окна*/
-@keyframes bounce {
+/*@keyframes bounce {
   0% {
     transform: translateY(-2000px);
   }
@@ -1583,7 +1601,7 @@ label + .search-controls:hover {
   }
 }
 
-@keyframes shake {
+/*@keyframes shake {
   0%,
   100% {
     transform: translateX(0);
@@ -1603,7 +1621,7 @@ label + .search-controls:hover {
   80% {
     transform: translateX(10px);
   }
-}
+}*/
 .modal {
 	border-radius: 5px;
 	background-color: rgb(248, 247, 244); 
@@ -1960,14 +1978,14 @@ label + .search-controls:hover {
 	line-height: 24px;
 }
 
-.modal-show {
+/*.modal-show {
   display: block;
- /* animation: bounce 0.6s;*/
+  animation: bounce 0.6s;
 }
 
 .modal-error {
   animation: shake 0.6s;
-}
+}*/
 
 .search:hover .modal-search {
 	display: block;

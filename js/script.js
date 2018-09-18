@@ -3,7 +3,7 @@ var range = {
   max: 700,
   step: 50
 }
-var form = document.querySelector('.search-form')
+var form = document.querySelector('.filter-search-form')
 var rangeBar = document.querySelector('.range-bar')
 var leverMin = document.querySelector('.range-lever-min')
 var leverMax = document.querySelector('.range-lever-max')
@@ -17,6 +17,9 @@ var onValuesGetting = function () {
   var valueMax = form.price[1].value
   var leverMinPos = scaleLength * valueMin / range.max + 'px' 
   var leverMaxPos = scaleLength * valueMax / range.max + 'px'
+  /*valueMin=form.priceOutput[0].value;
+  valueMax=form.priceOutput[1].value;*/
+  
   form.priceOutput[0].value = valueMin
   form.priceOutput[1].value = valueMax
   form.price[0].max = valueMax
