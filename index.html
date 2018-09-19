@@ -26,7 +26,7 @@
 				<div class="site-navigation-logo">
 					<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Glassy Shop">
 					<ul class="site-navigation">
-						<li class="catalog-link"><a id="a1"  href="catalog.html">Каталог</a>
+						<li class="catalog-link"><a class="catalog-link-main" id="a1"  href="catalog.html">Каталог</a>
 							<h2 class="visually-hidden">Главное меню</h2>
 							<ul class="main-menu" >
 								<li class="catalog-news"><a  href="#">Новинки</a></li>
@@ -37,8 +37,8 @@
 							</ul>
 							<button class="visually-hidden">Закрыть</button>
 						</li>  
-						<li><a href="delivery.html">Доставка и оплата</a></li>
-						<li><a href="about_us.html">О Компании</a></li>
+						<li><a class="catalog-link-delivery" href="delivery.html">Доставка и оплата</a></li>
+						<li><a class="catalog-link-aboutus" href="about_us.html">О Компании</a></li>
 					</ul>
 				</div>
 				<ul class="user-navigation">
@@ -246,19 +246,20 @@
 		
 		<section class="map">
 			<h2 class="visually-hidden">Мы на карте</h2>
-			<img src="img/map.jpg" alt="Карта" width="1200" height="430" class="map-img">
+			<!--img src="img/map.jpg" alt="Карта" width="1200" height="430" class="map-img"-->
 			<!--Иконка с мороженым-->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="1200" height="430" allowfullscreen></iframe>
+	
 			<div class="contacts-map">
-				<p class="map-p1">Адрес главного офиса и офлайн-магазина:<br></p>
+				<p class="map-p1">Адрес главного офиса и офлайн-магазина:</p>
 				<p class="map-p2">ул. Большая Конюшенная<br>
-				19/8, Санкт-Петерубург<br><br></p>
-				<p class="map-p1">Для заказов по телефону:<br></p>
-				<p class="map-p3">8 812 450-25-25<br></p>
+				19/8, Санкт-Петерубург</p>
+				<p class="map-p5">Для заказов по телефону:</p>
+				<p class="map-p3">8 812 450-25-25</p>
 				<p class="map-p4">(с 10 до 20 ежедневно)</p>
 				<a class="button relation-back-link" href="#">Форма обратной связи</a>
 			</div>
-			<!--iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="766" height="560" allowfullscreen></iframe-->
-		</section>
+				</section>
 		
 	</main>
 	<footer class="glassy-footer">
@@ -341,41 +342,9 @@
 		<button class="modal-close">Закрыть</button>
 	</section>
 	
-	<!--section class="modal modal-cart">
-		<h2 class="visually-hidden">Ваша корзина</h2>
-		<div class="header-popup modal-cart-header">
-			<img src="img/basket-red.svg" width="21" height="20" alt="корзина с товаром" >
-			<p>2 товара</p>
-		</div>
-		<form class="cart-send" action="https://echo.htmlacademy.ru" method="post">
-			<table> 
-				
-				<tr>
-					<td><button class="cart-del">Удалить товар</button></td>
-					<td><img src="img/product-1-small.jpg" width="33" height="33" alt="изображение товара"></td>
-					<td><input name="name-tovar1" id="name-tovar1" value="Пломбир с апельсиновым джемом"></td>
-					<td><input name="mass-tovar1" id="mass-tovar1" value="1,5 кг x"><p class="disabled">200 руб</p></td>
-					<td>300 руб.</td>
-				</tr>
-				<tr>
-					<td><button class="cart-del">Удалить товар</button></td>
-					<td><img src="img/product-3-small.jpg" width="33" height="33" alt="изображение товара"></td>
-					<td><input name="name-tovar2" id="name-tovar2" value="Клубничный пломбир с присыпкой из белого шоколада"></td>
-					<td><input name="mass-tovar2" id="mass-tovar2" value="1,5 кг x"><p class="disabled">300 руб</p></td>
-					<td>450 руб.</td>
-				</tr>
-				
-			</table>
-			<input name="summ" id="summ" value="750">
-			<button class="button" type="submit">Оформить заказ</button>
-		</form>
-	</section-->
-	
 	<div class="modal-overlay"></div>
-	
 	</div>
     </div>
-	
 	
 	<script>
 	var popup_overlay = document.querySelector(".modal-overlay");
@@ -384,17 +353,17 @@
 		var popup = document.querySelector(".modal-relation-back");
 		var close = popup.querySelector(".modal-close");
 		var form = popup.querySelector(".relation-back-form");
-		var client_name = popup.querySelector("[name=client-name]");
-		var client_email = popup.querySelector("[name=client-email]");
-		var client_text = popup.querySelector("[name=client-text]");
+		var client_name = popup.querySelector("[name=your-name]");
+		var client_email = popup.querySelector("[name=your-email]");
+		var client_text = popup.querySelector("[name=your-text]");
 		
 		var isStorageSupport = true;
 		var storage = "";
   
 		try {
-			storage[0] = localStorage.getItem("client-name");
-			storage[1] = localStorage.getItem("client-email");
-			storage[2] = localStorage.getItem("client-text");
+			storage[0] = localStorage.getItem("your-name");
+			storage[1] = localStorage.getItem("your-email");
+			storage[2] = localStorage.getItem("your-text");
 		} catch (err) {
 		isStorageSupport = false;
 		}
@@ -403,28 +372,29 @@
 		evt.preventDefault();
 		popup.classList.add("modal-show");
 		popup_overlay.classList.add("modal-overlay-show");
+		
 		if (storage[0]) {
       client_name.value = storage[0];
 	  
-    }else {
-      client_name.focus();
-    }
-	
-	if (storage[1]) {
+	  if (storage[1]) {
       client_email.value = storage[1];
 	  
-    }else {
-      client_email.focus();
-    }
-	
-	if (storage[2]) {
+	  if (storage[2]) {
       client_text.value = storage[2];
 	  
     }else {
       client_text.focus();
     }
+	  
+    }else {
+      client_email.focus();
+    }
+	  
+    }else {
+      client_name.focus();
+    }
 	
-  });
+	});
   
   close.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -451,7 +421,7 @@
 	  popup.classList.remove("modal-error");
       popup.offsetWidth = popup.offsetWidth;
 	  popup.classList.add("modal-error");
-      console.log("Нужно ввести имя");
+      console.log("Нужно ввести электронную почту");
     }else {
 	if (isStorageSupport) {
       localStorage.setItem("client-email", client_email.value);
@@ -463,7 +433,7 @@
 	  popup.classList.remove("modal-error");
       popup.offsetWidth = popup.offsetWidth;
 	  popup.classList.add("modal-error");
-      console.log("Нужно ввести имя");
+      console.log("Нужно ввести текст сообщения");
     }else {
 	if (isStorageSupport) {
       localStorage.setItem("client-text", client_text.value);
@@ -482,7 +452,15 @@
     }
   });
   
-  
+/*  var marker = new google.maps.Marker({
+	position: {lat: 55.77186, lng: 37.59343799999999},
+	map: iframe,
+	title: '',
+	icon: {
+		url: "img/pin.svg",
+		scaledSize: new google.maps.Size(64, 64)
+	}
+});*/
   /*var mapLink = document.querySelector(".contacts-button-map");
 
   var mapPopup = document.querySelector(".modal-map");
