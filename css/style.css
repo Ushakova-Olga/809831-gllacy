@@ -1319,7 +1319,7 @@ padding-bottom: 12px;
 .remember-new-login a:hover,
 .remember-new-login a:focus {
 	color: #e84d37;
-	border-bottom: 1px solid #f9cdc4;
+	/*border-bottom: 1px solid #f9cdc4;*/
 }
  
 /* Страница каталога */
@@ -2097,13 +2097,15 @@ display: none;
 
 .remember-new-login a {
 	font-size: 13px;
-	line-height: 14px;
+	line-height: 24px;
 	font-weight: 400;
+	padding:0;
+	text-decoration: underline;
 }
 
 .restore {
 	display: inline-block;
-	margin-bottom: 9px;
+	/*margin-bottom: 9px;*/
 }
 
 .modal a  {
@@ -2112,7 +2114,7 @@ display: none;
 
 .remember-new-login a {
 	color: #323232;
-	border-bottom: 1px solid #adacaa;
+	/*border-bottom: 1px solid #adacaa;*/
 }
 
 /* Окно поиска*/
