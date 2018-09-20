@@ -107,7 +107,7 @@ a {
 .html-academy-link,
 .crumbs a {
 	/*Вместо text-decoration: underline;*/
-	border-bottom: 1px solid #b0c0b7;
+	border-bottom: 1px solid rgba(255,255,255,0.4);/*#b0c0b7;*/
 }
 
 .crumbs a:hover,
@@ -140,9 +140,10 @@ a {
 	font: inherit;
 	text-align: center;
 	color: #ffffff;
-	vertical-align: middle;
+	
 	position: relative;
 	display: inline-block;
+	vertical-align: middle;
 	padding: 10px 30px;
 	
 	text-decoration: none;
@@ -297,6 +298,7 @@ a {
 
 .search-link {
 	display: inline-block;
+	vertical-align: middle;
 	padding: 0;
 	margin: 0;
 	width: 33px;
@@ -319,6 +321,7 @@ a {
 
 .login-link {
 	display: inline-block;
+	vertical-align: middle;
 	min-height: 33px;
 	width: 91px;
 	border-radius: 45px;
@@ -356,6 +359,7 @@ a {
 
 .cart-link {
 	display: inline-block;
+	vertical-align: middle;
 	min-height: 33px;
 	width:100px;
 	border-radius: 45px;
@@ -513,6 +517,7 @@ a {
 	width: 169px; 
 	margin-top: 4px;
 	display: inline-block; /*block-inline;*/
+	vertical-align: middle;
 	float: right;
 	margin-right: 0px;
 }
@@ -550,7 +555,7 @@ a {
 	height: 17px;
 	margin-right: 8px;
 	vertical-align: top;
-	background-color: #b2c1b7;
+	background-color: rgba(255,255,255,0.4);/*#b2c1b7;*/
 	border: 2px solid #ffffff;
 	border-radius: 50%;
 	cursor: pointer;
@@ -1251,6 +1256,7 @@ padding-bottom: 12px;
 	width: 40px;
 	min-height: 40px;
 	display: inline-block;
+	vertical-align: middle;
 }
 
 .social-list svg {
@@ -1325,7 +1331,7 @@ padding-bottom: 12px;
 /* Страница каталога */
 /* Header на странице каталога*/
 .fullcart-link {
-	display: block; /*inline-block;*/
+	display: block; 
 	/*min-height: 16px; /*33px;*/
 	width:117px;
 	border-radius: 45px;
@@ -1796,6 +1802,7 @@ display: none;
 	padding: 0;
 	margin-bottom: 3px;
 	padding-left: 20px;
+	vertical-align: middle;
 }
 /* Пагинация */
 .pagination {
@@ -1831,6 +1838,7 @@ display: none;
 }
 .pagination-list a{
 	display: inline-block;
+	vertical-align: middle;
 	min-width: 10px;
 	height:14px;
 	padding-left: 9px;
@@ -2104,7 +2112,7 @@ display: none;
 }
 
 .restore {
-	display: inline-block;
+	/*display: inline-block;*/
 	/*margin-bottom: 9px;*/
 }
 
