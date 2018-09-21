@@ -234,7 +234,7 @@ a {
 }
 
 .site-navigation-logo {
-	width: 540px;/*547px;*/
+	width: 542px;/*547px;*/
 	min-height: 64px;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -252,7 +252,7 @@ a {
 
 .site-navigation {
 	padding: 0;
-	width: 375px; /*383px; /*390px; */
+	width: 381px; /*383px; /*390px; */
 	list-style: none;
 	min-height: 16px; 
 	display: -webkit-box; 
@@ -402,13 +402,13 @@ a {
 }
 
 .catalog-link-delivery {
-	width: 142px;
+	width: 148px;
 	padding: 0;
 	margin: 0;
 }
 
 .catalog-link-aboutus {
-	width: 95px;
+	width: 97px;
 	padding: 0;
 	margin: 0;
 }
@@ -1059,7 +1059,8 @@ a {
 	line-height: 30px;
 	text-decoration: none;
 	color: #323232;
-	box-shadow: inset 0 -3px 0 #323232;
+	-webkit-box-shadow: inset 0 -3px 0 #323232;
+	        box-shadow: inset 0 -3px 0 #323232;
 	right: 253px;
 	text-align: left;
 	width: 281px;
@@ -1069,7 +1070,8 @@ a {
 .news a:hover,
 .news a:active {
     color:  #e84d37;
-	box-shadow: inset 0 -3px 0 rgba(232, 77, 55, 0.3);
+	-webkit-box-shadow: inset 0 -3px 0 rgba(232, 77, 55, 0.3);
+	        box-shadow: inset 0 -3px 0 rgba(232, 77, 55, 0.3);
 }
  
 /* Раздел Рассылка */
@@ -1112,6 +1114,27 @@ a {
 	margin-right: 10px;
 	border-radius: 5px;
 	border: 1px solid #d3d3d2;
+}
+
+.mailer input::-webkit-input-placeholder {
+	padding-left: 14px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #999999;
+}
+
+.mailer input:-ms-input-placeholder {
+	padding-left: 14px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #999999;
+}
+
+.mailer input::-ms-input-placeholder {
+	padding-left: 14px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #999999;
 }
 
 .mailer input::placeholder {
@@ -1491,7 +1514,7 @@ display: none;
 .filter-select:focus,
 .filter-select:active {
 	
-	background: url("../img/icon-down-dir2.svg") 93% / 6% no-repeat #ffffff; /*a9b9af; */
+	background: url("../img/icon-down-dir2.svg") 90% / 6% no-repeat #ffffff; /*a9b9af; */
 }
 
 .filter-select:disabled   {
@@ -2319,12 +2342,20 @@ display: none;
 	margin-left: 15px;
 	margin-right: 32px;
 }
-
+.product-volume-price {
+	min-width: 100px;
+	padding: 0;
+	margin: 0;
+}
 .product-volume-price p {
 	margin: 0;
 	padding: 0;
 }
-
+.product-summ {
+	min-width: 100px;
+	padding: 0;
+	margin: 0;
+}
 .product-summ span {
 	margin-left: 18px;
 }
@@ -2353,7 +2384,7 @@ display: none;
 }
 
 .cart-summ  { 
-	width: 118px;
+	min-width: 118px;
 	float: right;
 }
 
