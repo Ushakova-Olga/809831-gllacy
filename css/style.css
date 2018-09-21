@@ -658,7 +658,7 @@ a {
 
 .banners-list p {
 	font-size: 18px;
-	line-height: 24px;	
+	line-height: 22px;	
 }
 
 .banner-1 {
@@ -1014,7 +1014,7 @@ a {
 }
 
 /* Раздел Новости и рассылка*/
-.news-container {
+.news-mailer-container {
 	width: 1146px;
 	margin: 0;
 	padding: 0;
@@ -1817,6 +1817,7 @@ display: none;
 	display: inline-block;
 	vertical-align: middle;
 	min-width: 10px;
+	font-weight: 500;
 	height:14px;
 	padding-left: 9px;
 	padding-right: 9px;
@@ -2386,9 +2387,6 @@ display: none;
 .cart-summ  { 
 	min-width: 118px;
 	float: right;
-}
-
-.cart-summ span {
 	font-weight: 700;
 	font-size: 15px;
 	line-height: 18px;
