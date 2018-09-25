@@ -737,7 +737,7 @@ a {
 	line-height: 24px;
 	float: right;
 	right: 20px;
-	bottom: 22px;
+	bottom: 24px;
 	padding: 11px 22px;
 }
 
@@ -758,7 +758,7 @@ a {
 	padding:0;
 	padding-left: 20px;
 	padding-right: 15px;
-	padding-bottom: 50px;
+	padding-bottom: 70px;
 }
 
 /* Раздел Популярные товары и Каталог */
@@ -800,7 +800,7 @@ a {
 	min-height: 324px; 
 	width: 266px; 
 	margin: 0;
-	margin-bottom: -9px; 
+	margin-bottom: -8px;/*-9px; */
 	margin-left: 27px;
 }
 
@@ -837,8 +837,8 @@ a {
 .price-digit::after {
 	content: "";
 	position: absolute;
-	top: 6px;
-	left: 82px;
+	top: 4px;
+	left: 80px;
 	width: 31px;
 	height: 36px;
 	background-image: url("../img/ruble.svg");
@@ -847,7 +847,7 @@ a {
 
 .price-letters {
 	font-size: 30px;
-	margin-left: 38px;
+	margin-left: 32px;
 }
 
 .catalog-item-link {
@@ -915,7 +915,7 @@ a {
 	margin: 0;
 	padding: 0;
 	min-height: 324px; 
-	width: 1146px; 
+	width: 1146px;
 }
 
 .catalog-list{
@@ -928,7 +928,7 @@ a {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	margin-bottom: 33px;
+	margin-bottom: 31px;
 	margin-left: -27px;
 }
 
@@ -965,7 +965,7 @@ a {
 	color: #323232;
 	padding: 0;
 	margin: 0;
-	margin-bottom: 20px;
+	margin-bottom: 23px;
 }
 
 .features-list {
@@ -980,13 +980,16 @@ a {
 	    flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
-	padding-left: 25px;
+	padding-left: 18px;
 	padding-top: 20px;
+}
+.features-list li:nth-child(2n+1) {
+	margin-left: 14px;
 }
 
 .feature-item {
 	text-align: left;	
-	width: 475px;
+	width: 476px;
 	min-height: 63px; 
 	padding: 0;
 	margin: 0;
@@ -999,8 +1002,8 @@ a {
 .ice-cream::before {
 	content: "";
 	position: absolute;
-	top: -10px;
-	left: -55px;
+	top: -11px;
+	left: -58px;
 	width: 49px;
 	height: 49px;
 	background-image: url("../img/ice-cream.svg"); 
@@ -1015,8 +1018,8 @@ a {
 .cow::before {
 	content: "";
   	position: absolute;
-	top: -10px;
-	left: -60px;
+	top: -11px;
+	left: -58px;
   	width: 49px;
 	height: 49px;
   	background-image: url("../img/cow.svg"); 
@@ -1031,8 +1034,8 @@ a {
 .eco::before {
 	content: "";
  	position: absolute;
-	top: -10px;
-	left: -55px;
+	top: -12px;
+	left: -58px;
 	width: 49px;
 	height: 49px;
  	background-image: url("../img/eco.svg"); 
@@ -1047,8 +1050,8 @@ a {
 .thermometer::before {
 	content: "";
 	position: absolute;
-	top: -10px;
-	left: -60px;
+	top: -12px;
+	left: -58px;
 	width: 49px;
 	height: 49px;
 	background-image: url("../img/thermometer.svg"); 
@@ -1061,7 +1064,6 @@ a {
 	width: 1146px;
 	margin: 0;
 	padding: 0;
-	margin-bottom: 40px;
 	min-height: 220px;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1069,24 +1071,25 @@ a {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .news {
 	background: #ffffff;
 	background-image: url("../img/background-3.jpg"); 
-	background-position: 209px -40px; 
+	background-position: 207px -35px; 
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	width: 330px; /*283px; */
+	width: 330px; 
 	min-height: 190px; 
 	border: 0px solid rgba(0, 0, 0, 0);
 	border-radius: 18px;
-	padding-right: 210px; /*260px;*/
+	padding-right: 210px;
 	padding-left: 20px;
 	padding-bottom: 30px;
-	-ms-flex-item-align: start;
-	    align-self: flex-start;
+	margin-bottom: 38px;
 }
 
 .news h2 {
@@ -1131,8 +1134,7 @@ a {
     border-radius: 18px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-	-ms-flex-item-align: start;
-	    align-self: flex-start;
+	margin-bottom: 38px;
 }
 
 .blanc {
@@ -1140,6 +1142,7 @@ a {
 	padding: 0;
 	margin: 6px;
     border-radius: 18px;
+	height: calc( 100% - 12px );
 }
 
 .mailer p {
@@ -1161,7 +1164,7 @@ a {
 	font-weight: 700;
 	color: #323232;
 	width: 351px;
-	margin-bottom: 33px;
+	margin-bottom: 35px;
 	margin-right: 9px;
 	border-radius: 5px;
 	border: 1px solid #d3d3d2;
@@ -1249,6 +1252,7 @@ a {
 .map-p2 {
 	margin: 0;
 	padding: 0;
+	padding-right: 40px;
 	padding-bottom: 18px;
 	font-size: 18px;
 	line-height: 24px;
@@ -1327,7 +1331,7 @@ a {
             align-items: flex-start;
 	margin: 0;
 	padding: 0;
-	padding-bottom: 24px;
+	padding-bottom: 23px;
 } 
 
 .social-list {
@@ -1936,7 +1940,7 @@ label + .search-controls:hover {
 .pagination::before {
 	position: absolute;
 	left: 0;
-	bottom: 0;
+	bottom: 1px;
 	content: "";
 	width: 100%;
 	height: 1px;
