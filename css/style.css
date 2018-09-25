@@ -413,7 +413,7 @@ a {
 	padding-top: 10px;
 }
 
-.catalog-news  a{
+.catalog-news  a {
 	font-weight:700;
 }
 
@@ -769,7 +769,7 @@ a {
 	width: 1146px;
 }
 
-.hits-list{
+.hits-list {
 	margin: 0;
 	padding: 0;
 	min-height: 324px; 
@@ -1911,6 +1911,7 @@ label + .search-controls:hover {
   .sort-rows label ,
   .filler-rows p {
 	display: inline-block;
+	font-weight: 500;
 	margin: 0;
 	padding: 0;
 	margin-bottom: 5px;
@@ -2016,7 +2017,7 @@ label + .search-controls:hover {
 	
 }
 
-.next-item  path{
+.next-item  path {
 	fill: #ffffff;
 }
 
