@@ -1712,7 +1712,6 @@ label + .search-controls:hover {
  }
  
 .fat-radio {
-	border-box: 0px solid #000000;
 	min-height: 38px;
 	display: -webkit-box;
 	display: -ms-flexbox;
