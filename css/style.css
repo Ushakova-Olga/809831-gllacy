@@ -354,9 +354,8 @@ a {
 	top: 40px;
 	margin: 0;
 	padding:0;
-	display: none;
+	display: none; 
 	position: absolute;
-	min-height:170px;
 	width: 143px;
 	background: #ffffff;
 	border-radius: 5px;
@@ -365,6 +364,7 @@ a {
 
 .main-menu a {
 	color: #323232;
+
 	font-size: 14px;
 	line-height: 16px;
 	font-weight:400;
@@ -374,52 +374,74 @@ a {
 	float: left;
 	padding: 0;
 	padding-left: 21px;
-	padding-top: 10px;
 	margin: 0;
-	min-height: 30px;
+	min-height: 16px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin-top: 0px;
+	margin-bottom: 3px;	
 }
 
-.main-menu a:hover {
+.main-menu a:hover,
+.main-menu a:focus {
 	background: rgb(251, 222, 215);
 	width: 122px; 
-	min-height: 30px;
 	border-radius: 0;
 	text-align: left;
 	float: left;
 	padding: 0;
 	padding-left: 21px; 
-	padding-top: 10px;
 	margin: 0;
+	min-height: 16px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin-top: 0px;
+	margin-bottom: 3px;
 }
 
 .main-menu a:active {
 	background: #f6b5a5;
 	width: 122px; 
-	min-height: 30px;
 	border-radius: 0;
 	text-align: left;
 	float: left;
 	padding: 0;
 	padding-left: 21px; 
-	padding-top: 10px;
 	margin: 0;
+	
+	min-height: 16px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin-top: 0px;
+	margin-bottom: 3px; 
 }
 
-.main-menu a:focus {
-	min-height: 30px;
-	text-align: left;
-	padding: 0;
-	padding-left: 21px; 
-	padding-top: 10px;
+.catalog-news {
+	position: relative;
+	
+}
+.catalog-news::after {
+	position: absolute;
+	content: "";
+	top: 37px;
+	left: 0;
+	width: 143px;
+	height: 1px;
+	background: #d1d0ce;
 }
 
 .catalog-news  a {
 	font-weight:700;
+	margin-top: 5px; 
+	margin-bottom: 10px; 
 }
 
-.catalog-news a:hover {
+.catalog-news a:hover, 
+.catalog-news a:focus {
 	font-weight:700;
 	border-radius: 5px 5px 0 0;
+	margin-top: 5px; 
+	margin-bottom: 10px; 
 } 
 
 .user-navigation {
@@ -541,22 +563,17 @@ a {
 }
 
 /* Пришлось делать такой селектор из-за ограничения вложенности 2*/
-.last-menu a:hover {
-	border-radius: 0 0 5px 5px;
-} 
+.last-menu a {
+	margin-top: 0px; 
+	margin-bottom: 7px; 
+}
 
-.catalog-news {
-	position: relative;
-}
-.catalog-news::after {
-	position: absolute;
-	content: "";
-	top: 39px;
-	left: 0;
-	width: 143px;
-	height: 1px;
-	background: #d1d0ce;
-}
+.last-menu a:hover,
+ .last-menu a:focus {
+	border-radius: 0 0 5px 5px;
+	margin-top: 0px; 
+	margin-bottom: 7px; 
+} 
 
 .time {
 	font-size: 14px;
@@ -616,6 +633,10 @@ a {
 	border: 2px solid #ffffff;
 	border-radius: 50%;
 	cursor: pointer;
+}
+
+.slider-controls label:active {
+	background-color: #ffffff;
 }
 
 .slide {
@@ -800,7 +821,7 @@ a {
 	min-height: 324px; 
 	width: 266px; 
 	margin: 0;
-	margin-bottom: -8px;/*-9px; */
+	margin-bottom: -8px;
 	margin-left: 27px;
 }
 
@@ -1110,7 +1131,7 @@ a {
 	color: #323232;
 	-webkit-box-shadow: inset 0 -3px 0 #323232;
 	        box-shadow: inset 0 -3px 0 #323232;
-	right: 277px;/*253px;*/
+	right: 277px;
 	text-align: left;
 	width: 281px;
 	
@@ -1331,7 +1352,7 @@ a {
             align-items: flex-start;
 	margin: 0;
 	padding: 0;
-	padding-bottom: 23px;
+	padding-bottom: 21px;
 } 
 
 .social-list {
@@ -1370,10 +1391,19 @@ a {
 	border-radius: 50%;
 }
 
+.social-list svg:active {
+	border: 2px solid rgba(255,255,255,0.7);
+	border-radius: 50%;
+}
+
+.social-list svg:active path{
+	fill: #e9e9e9;
+}
+
 .bottom-list {
 	padding: 0;
 	margin:0;
-	width: 335px; /*335px; /*335px;*/
+	width: 335px;
 	
 	min-height: 45px;
 	display: -webkit-box;
@@ -1469,12 +1499,15 @@ a {
 
 .current-page a::after {
     display: none;
- }
-.current {
+}
+
+.current a {
+	color: #ffffff;
 	background: #d07058;
 }
 
 .current a:hover {
+	color: #ffffff;
 	background: #d07058;
 }
 
@@ -1993,7 +2026,6 @@ label + .search-controls:hover {
 	border-radius: 50%;
 }
 
-
 .next-item {
 	width: 10px;
 }
@@ -2014,7 +2046,6 @@ label + .search-controls:hover {
 
 .pagination-unable a:hover {
 	background-color: transparent;
-	
 }
 
 .next-item  path {
@@ -2029,6 +2060,10 @@ label + .search-controls:hover {
 	color: #323232;
 	background-color: #ffffff;
 	border-radius: 50%;
+}
+
+.inner-footer {
+	padding-bottom: 26px;
 }
 
 /* Модальные окна*/
